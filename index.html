@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tadelola Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/87ac3cf49e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+</head>
+<body>
+    <div class="sticky-sidebar">
+        <div class="profile">
+            <div class="image">
+                <div class="innerimg"><img src="images/profile1.jpg" alt=""></div>
+            </div>
+            <div class="name">Tadelola</div>
+            <div class="title">Software Engineer</div>
+            <div class="socials">
+                <a href="" class="yb"><i class="fa-brands fa-youtube"></i></a>
+                <a href="" class="in"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="" class="git"><i class="fa-brands fa-square-github"></i></a>
+                <a href="" class="lnd"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="button">
+                <button>Message</button>
+            </div>
+            <div class="contact">
+                <div class="email-container" id="email-container">
+                    <div class="email-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="email"> 
+                        <p>EMAIL</p>
+                        <p id="emailAddr">adulojutadelolaburj@gmail.com</p>
+                    </div>
+                    <p id="copied-msg" class="copiedmsg">Copied! adulojutadelolaburj@gmail.com</p>
+                </div>
+                <div class="phone-container" id="phone-container">
+                    <div class="phone-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="phone">
+                        <P>PHONE</P>
+                        <p id="phoneN0">+234-816-896-3852</p>
+                    </div>
+                    <p id="copiedN0" class="copiedN0">Copied! +234-816-896-3852</p>
+                </div>
+                <div class="location-container">
+                    <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="location">
+                        <p>LOCATION</p>
+                        <p>Lagos, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="current-space"></div>
+        <a href="#" class="logo-container">
+            <span class="logo">About me</span>
+            <span class="underline"></span>
+        </a>
+        <nav class="navbar">
+            <div class="current-select"></div>
+            <a href="#about" class="nav-link" data-display-text="About me">About</a>
+            <a href="#skills" class="nav-link" data-display-text="My skills">Skills</a>
+            <a href="#projects" class="nav-link" data-display-text="My Portfolio">Projects</a>
+            <a href="#contacts" class="nav-link" data-display-text="Contact me">Contact</a>
+            <span class="nav-indicator"></span>
+        </nav>
+    </div>
+    
+    <!--section aboutme-->
+    <section class="aboutme" id="about">
+        <div class="about-content">
+            <h1>Hey, i'm Tadelola</h1>
+            <p>I'm an Electrical and Electronics student with a passion for problem-solving and backend development. <br>I'm Proficient in Javascript an Python, and i enjoy building efficient systems that solve real-world challenges</p>
+        </div>
+        <div class="about-picture">
+            <div class="image-container">
+                <div class="left-curve"></div>
+                <div class="right-bottom">
+                    <span>Software Engineer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section skills -->
+    <section class="skills" id="skills">
+        <div class="edu-exp">
+            <h2 class="head-edu">Education</h2>
+            <h2 class="head-edu">Experience</h2>
+            <div class="school">
+                <span>2020-present</span>
+                <span>University</span>
+                <span>of Lagos</span>
+                <span>(UNILAG)</span>
+            </div>
+            <div class="line-divide"></div>
+            <div class="circle"></div>
+            <div class="details">
+                <p><span class="edu-eng">Enginnering</span><br>Pursuing B.S.C in Electrical and Electronics Engineering</p>
+            </div>
+            <div class="school"></div>
+            <div class="details"></div>
+        </div>
+        <div class="coding-skills">
+            <h2 class="topic">Front-end</h2>
+            <h2 class="topic">Back-end/programming languages</h2>
+            <button class="arrow-left" onclick="scrollCarousel(-1)">&#10094;</button>
+            <button class="arrow-right" onclick="scrollCarousel(1)">&#10095;</button>
+            <h2 class="head-edu">Coding Skils</h2>
+            <div class="frontend">
+                <div class="fskillrate">
+                    <div class="code-img"><img src="images/html.png" alt=""></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob1">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+                <div class="fskillrate">
+                    <div class="code-img"><img src="images/css.png" alt=""></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob2">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+                <div class="fskillrate">
+                    <div class="code-img"><img src="images/js.png" alt=""></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob3">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="backend" id="carousel">
+                <div class="fskillrate">
+                    <div class="code-img"><img src="images/js.png" alt=""></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob4">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+                <div class="fskillrate">
+                    <div class="code-img"><img src="images/python.png" alt=""></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob5">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+                <div class="fskillrate">
+                    <div class="code-img"><img src="images/rust.png" alt=""></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob6">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+                <div class="fskillrate">
+                    <div class="code-img"></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob6">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+                <div class="fskillrate">
+                    <div class="code-img"></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob6">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+                <div class="fskillrate">
+                    <div class="code-img"></div>
+                    <div class="dail-wrapper">
+                        <div class="ticks"></div>
+                        <div class="knob-ind" id="knob6">
+                            <div class="needle"></div>
+                        </div>
+                        <div class="circle-shd"></div>
+                    </div>
+                    <div class="percentage">
+                        <div class="percentage-text">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+       <h2 class="project-head">My Projects</h2>
+       <div class="filter-cotainer">
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="websites">Websites</button>
+            <button class="filter-btn" data-filter="web-apps">Web-Apps</button>
+        </div>
+        <div class="project-container">
+            <div class="project" data-category="all websites"><div class="project-img"><img src="images/portfolio.png" alt=""></div><span>Portfolio Website</span></div>
+            <div class="project" data-category="all web-apps"><div class="project-img"></div><span>Ai Quiz</span></div>
+        </div>
+       </div> 
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="contact-container">
+            <div class="left">
+                <div class="contact-heading">
+                    <h1>Lets work together<span>.</span></h1>
+                    <p class="text">Or reach me via <a href="mailto:adulojutadelolaburj@gmail.com">adulojutadelolaburj@gmail.com</a></p>
+
+                </div>
+                <div class="form-wrapper">
+                    <form action="index.html" method="post" class="contact-form">
+                        <div class="input-wrap">
+                            <input type="text" autocomplete="off" name="First Name" class="contact-input" required>
+                            <label>First Name</label>
+                            <i class="icon fa-solid fa-address-card"></i>
+                        </div>
+
+                        <div class="input-wrap">
+                            <input type="text" autocomplete="off" name="Last Name" class="contact-input" required>
+                            <label>Last Name</label>
+                            <i class="icon fa-solid fa-address-card"></i>
+                        </div>
+
+                        <div class="input-wrap w-100">
+                            <input type="email" autocomplete="off" name="Email" class="contact-input" required>
+                            <label>Email</label>
+                            <i class="icon fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div class="input-wrap textarea w-100">
+                            <textarea name="Message" autocomplete="off" class="contact-input" required></textarea>
+                            <label>Message</label>
+                            <i class="icon fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div class="contact-buttons w-100">
+                            <button class="btn upload">
+                                <span><i class="fa-solid fa-paperclip"></i> Add attachement</span>
+                                <input type="file" name="attachement">
+                            </button>
+                            <input type="submit" value="Send message" class="btn submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
