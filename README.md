@@ -11,7 +11,7 @@ My personal portfolio site: who I am, my skills, projects and how to reach me.
 - Fully responsive: desktop sidebar layout, tablet and phone layouts with a menu button
 - Animated education and experience timeline, with a SIWES details pop-up and photo gallery
 - Animated skill dials for front-end and programming languages
-- Projects with Hardware / Web filters; hardware projects open detail pop-ups (system diagram, results, photos), web projects link to GitHub
+- Projects with Hardware / Web filters; hardware projects open detail pop-ups (system diagram, results, photos), Tasker opens its live demo
 - Contact form that opens a pre-filled email (no backend needed on GitHub Pages)
 - Click-to-copy email and phone
 - Soft "neumorphic" design built from scratch
