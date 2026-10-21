@@ -2,14 +2,18 @@
 
 My personal portfolio site: who I am, my skills, projects and how to reach me.
 
-![Portfolio screenshot](images/screenshot.png)
+![Portfolio on desktop](images/screenshot.png)
+
+<img src="images/screenshot-mobile.png" alt="Portfolio on mobile" width="260">
 
 ## Features
 
-- About section with education and experience
-- Animated skill meters for front-end and programming languages
-- Projects gallery with filters (All, Websites, Web Apps)
-- Contact form and click-to-copy email and phone
+- Fully responsive: desktop sidebar layout, tablet and phone layouts with a menu button
+- Education and experience timeline
+- Animated skill dials for front-end and programming languages
+- Projects gallery with filters, linking to each project on GitHub
+- Contact form that opens a pre-filled email (no backend needed on GitHub Pages)
+- Click-to-copy email and phone
 - Soft "neumorphic" design built from scratch
 
 ## Built with

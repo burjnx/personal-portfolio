@@ -3,82 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tadelola Portfolio</title>
+    <title>Tadelola Aduloju | Portfolio</title>
+    <meta name="description" content="Tadelola Aduloju: Electrical and Electronics Engineering graduate (UNILAG) working in embedded systems, machine learning and web development.">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/87ac3cf49e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-    <div class="sticky-sidebar">
+    <aside class="sticky-sidebar">
         <div class="profile">
             <div class="image">
-                <div class="innerimg"><img src="images/profile1.jpg" alt=""></div>
+                <div class="innerimg"><img src="images/profile1.jpg" alt="Tadelola Aduloju"></div>
             </div>
             <div class="name">Tadelola</div>
             <div class="title">Software Engineer</div>
             <div class="socials">
-                <a href="" class="yb"><i class="fa-brands fa-youtube"></i></a>
-                <a href="" class="in"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="" class="git"><i class="fa-brands fa-square-github"></i></a>
-                <a href="" class="lnd"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/burjnx" class="git" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:adulojutadelolaburj@gmail.com" class="mail" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
             <div class="button">
-                <button>Message</button>
+                <button type="button" id="message-btn">Message</button>
             </div>
             <div class="contact">
-                <div class="email-container" id="email-container">
-                    <div class="email-icon"><i class="fa-solid fa-envelope"></i></div>
-                    <div class="email"> 
+                <div class="contact-item copyable" id="email-container" title="Click to copy">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="contact-text">
                         <p>EMAIL</p>
                         <p id="emailAddr">adulojutadelolaburj@gmail.com</p>
                     </div>
-                    <p id="copied-msg" class="copiedmsg">Copied! adulojutadelolaburj@gmail.com</p>
+                    <p id="copied-msg" class="copiedmsg">Copied!</p>
                 </div>
-                <div class="phone-container" id="phone-container">
-                    <div class="phone-icon"><i class="fa-solid fa-phone"></i></div>
-                    <div class="phone">
-                        <P>PHONE</P>
+                <div class="contact-item copyable" id="phone-container" title="Click to copy">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-text">
+                        <p>PHONE</p>
                         <p id="phoneN0">+234-816-896-3852</p>
                     </div>
-                    <p id="copiedN0" class="copiedN0">Copied! +234-816-896-3852</p>
+                    <p id="copiedN0" class="copiedmsg">Copied!</p>
                 </div>
-                <div class="location-container">
-                    <div class="location-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div class="location">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-text">
                         <p>LOCATION</p>
                         <p>Lagos, Nigeria</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="header">
+    </aside>
+
+    <header class="header">
         <div class="current-space"></div>
-        <a href="#" class="logo-container">
+        <a href="#about" class="logo-container">
             <span class="logo">About me</span>
             <span class="underline"></span>
         </a>
+        <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
         <nav class="navbar">
             <div class="current-select"></div>
-            <a href="#about" class="nav-link" data-display-text="About me">About</a>
+            <a href="#about" class="nav-link active" data-display-text="About me">About</a>
             <a href="#skills" class="nav-link" data-display-text="My skills">Skills</a>
             <a href="#projects" class="nav-link" data-display-text="My Portfolio">Projects</a>
             <a href="#contacts" class="nav-link" data-display-text="Contact me">Contact</a>
-            <span class="nav-indicator"></span>
         </nav>
-    </div>
-    
+    </header>
+
+    <main>
     <!--section aboutme-->
     <section class="aboutme" id="about">
         <div class="about-content">
             <h1>Hey, I'm Tadelola</h1>
-            <p>I'm an Electrical and Electronics Engineering graduate with a passion for problem-solving, embedded systems and software development. <br>I work in JavaScript and Python, and I enjoy building efficient systems that solve real-world challenges.</p>
+            <p>I'm an Electrical and Electronics Engineering graduate with a passion for problem-solving, embedded systems and software development.</p>
+            <p>I work in JavaScript and Python, and I enjoy building efficient systems that solve real-world challenges.</p>
         </div>
         <div class="about-picture">
             <div class="image-container">
@@ -94,213 +93,131 @@
     <section class="skills" id="skills">
         <div class="edu-exp">
             <h2 class="head-edu">Education</h2>
+            <ol class="timeline">
+                <li>
+                    <div class="when">2020 – 2026</div>
+                    <div class="what">
+                        <strong>University of Lagos (UNILAG)</strong>
+                        B.Sc. Electrical and Electronics Engineering
+                    </div>
+                </li>
+            </ol>
             <h2 class="head-edu">Experience</h2>
-            <div class="school">
-                <span>2020-present</span>
-                <span>University</span>
-                <span>of Lagos</span>
-                <span>(UNILAG)</span>
-            </div>
-            <div class="line-divide"></div>
-            <div class="circle"></div>
-            <div class="details">
-                <p><span class="edu-eng">Engineering</span><br>B.Sc. Electrical and Electronics Engineering</p>
-            </div>
-            <div class="school"></div>
-            <div class="details"></div>
+            <ol class="timeline">
+                <li>
+                    <div class="when">Nov 2025</div>
+                    <div class="what">
+                        <strong>Media and Audio-Visual Team</strong>
+                        MIRG-ICAIR 2025, International Conference on AI and Robotics, UNILAG
+                    </div>
+                </li>
+                <li>
+                    <div class="when">Apr – Sep 2025</div>
+                    <div class="what">
+                        <strong>Hardware and Embedded Systems Intern</strong>
+                        Nithub (NITDA IT Hub), UNILAG. Built an ESP32 smart home switch and frontend screens for a React task app.
+                    </div>
+                </li>
+            </ol>
         </div>
         <div class="coding-skills">
-            <h2 class="topic">Front-end</h2>
-            <h2 class="topic">Back-end/programming languages</h2>
-            <button class="arrow-left" onclick="scrollCarousel(-1)">&#10094;</button>
-            <button class="arrow-right" onclick="scrollCarousel(1)">&#10095;</button>
             <h2 class="head-edu">Coding Skills</h2>
-            <div class="frontend">
-                <div class="fskillrate">
-                    <div class="code-img"><img src="images/html.png" alt=""></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob1">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
+            <h3 class="topic">Front-end</h3>
+            <div class="skill-row">
+                <div class="fskillrate" data-target="49">
+                    <div class="code-img"><img src="images/html.png" alt="HTML"></div>
+                    <div class="dail-wrapper"><div class="ticks"></div><div class="knob-ind"><div class="needle"></div></div></div>
+                    <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
-                <div class="fskillrate">
-                    <div class="code-img"><img src="images/css.png" alt=""></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob2">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
+                <div class="fskillrate" data-target="47">
+                    <div class="code-img"><img src="images/css.png" alt="CSS"></div>
+                    <div class="dail-wrapper"><div class="ticks"></div><div class="knob-ind"><div class="needle"></div></div></div>
+                    <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
-                <div class="fskillrate">
-                    <div class="code-img"><img src="images/js.png" alt=""></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob3">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
+                <div class="fskillrate" data-target="39">
+                    <div class="code-img"><img src="images/js.png" alt="JavaScript"></div>
+                    <div class="dail-wrapper"><div class="ticks"></div><div class="knob-ind"><div class="needle"></div></div></div>
+                    <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
             </div>
-            <div class="backend" id="carousel">
-                <div class="fskillrate">
-                    <div class="code-img"><img src="images/js.png" alt=""></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob4">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
+            <h3 class="topic">Back-end and programming</h3>
+            <div class="skill-row">
+                <div class="fskillrate" data-target="39">
+                    <div class="code-img"><img src="images/python.png" alt="Python"></div>
+                    <div class="dail-wrapper"><div class="ticks"></div><div class="knob-ind"><div class="needle"></div></div></div>
+                    <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
-                <div class="fskillrate">
-                    <div class="code-img"><img src="images/python.png" alt=""></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob5">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
+                <div class="fskillrate" data-target="33">
+                    <div class="code-img"><span class="code-badge">C/C++</span></div>
+                    <div class="dail-wrapper"><div class="ticks"></div><div class="knob-ind"><div class="needle"></div></div></div>
+                    <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
-                <div class="fskillrate">
-                    <div class="code-img"><img src="images/rust.png" alt=""></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob6">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
-                </div>
-                <div class="fskillrate">
-                    <div class="code-img"></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob6">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
-                </div>
-                <div class="fskillrate">
-                    <div class="code-img"></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob6">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
-                </div>
-                <div class="fskillrate">
-                    <div class="code-img"></div>
-                    <div class="dail-wrapper">
-                        <div class="ticks"></div>
-                        <div class="knob-ind" id="knob6">
-                            <div class="needle"></div>
-                        </div>
-                        <div class="circle-shd"></div>
-                    </div>
-                    <div class="percentage">
-                        <div class="percentage-text">0%</div>
-                    </div>
+                <div class="fskillrate" data-target="27">
+                    <div class="code-img"><span class="code-badge">FastAPI</span></div>
+                    <div class="dail-wrapper"><div class="ticks"></div><div class="knob-ind"><div class="needle"></div></div></div>
+                    <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="projects" id="projects">
-       <h2 class="project-head">My Projects</h2>
-       <div class="filter-cotainer">
+        <h2 class="project-head">My Projects</h2>
         <div class="projects-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="websites">Websites</button>
-            <button class="filter-btn" data-filter="web-apps">Web-Apps</button>
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="websites">Websites</button>
+            <button type="button" class="filter-btn" data-filter="web-apps">Web Apps</button>
         </div>
         <div class="project-container">
-            <div class="project" data-category="all websites"><div class="project-img"><img src="images/portfolio.png" alt=""></div><span>Portfolio Website</span></div>
-            <div class="project" data-category="all web-apps"><div class="project-img"><img src="images/tasker.png" alt="Tasker task management app"></div><span>Tasker App</span></div>
-            <div class="project" data-category="all web-apps"><div class="project-img"></div><span>Ai Quiz</span></div>
+            <a class="project" data-category="websites" href="https://github.com/burjnx/personal-portfolio" target="_blank" rel="noopener">
+                <div class="project-img"><img src="images/portfolio.png" alt="Portfolio website screenshot"></div>
+                <span class="project-name">Portfolio Website</span>
+                <span class="project-tech">HTML · CSS · JavaScript</span>
+            </a>
+            <a class="project" data-category="web-apps" href="https://github.com/burjnx/tasker-auth-demov1" target="_blank" rel="noopener">
+                <div class="project-img"><img src="images/tasker.png" alt="Tasker task management app screenshot"></div>
+                <span class="project-name">Tasker App</span>
+                <span class="project-tech">React · Tailwind · Nithub team</span>
+            </a>
         </div>
-       </div> 
     </section>
+
     <section class="contacts" id="contacts">
         <div class="contact-container">
-            <div class="left">
-                <div class="contact-heading">
-                    <h1>Let's work together<span>.</span></h1>
-                    <p class="text">Or reach me via <a href="mailto:adulojutadelolaburj@gmail.com">adulojutadelolaburj@gmail.com</a></p>
-
-                </div>
-                <div class="form-wrapper">
-                    <form action="index.html" method="post" class="contact-form">
-                        <div class="input-wrap">
-                            <input type="text" autocomplete="off" name="First Name" class="contact-input" required>
-                            <label>First Name</label>
-                            <i class="icon fa-solid fa-address-card"></i>
-                        </div>
-
-                        <div class="input-wrap">
-                            <input type="text" autocomplete="off" name="Last Name" class="contact-input" required>
-                            <label>Last Name</label>
-                            <i class="icon fa-solid fa-address-card"></i>
-                        </div>
-
-                        <div class="input-wrap w-100">
-                            <input type="email" autocomplete="off" name="Email" class="contact-input" required>
-                            <label>Email</label>
-                            <i class="icon fa-solid fa-envelope"></i>
-                        </div>
-
-                        <div class="input-wrap textarea w-100">
-                            <textarea name="Message" autocomplete="off" class="contact-input" required></textarea>
-                            <label>Message</label>
-                            <i class="icon fa-solid fa-envelope"></i>
-                        </div>
-
-                        <div class="contact-buttons w-100">
-                            <button class="btn upload">
-                                <span><i class="fa-solid fa-paperclip"></i> Add attachment</span>
-                                <input type="file" name="attachement">
-                            </button>
-                            <input type="submit" value="Send message" class="btn submit">
-                        </div>
-                    </form>
-                </div>
+            <div class="contact-heading">
+                <h2>Let's work together<span>.</span></h2>
+                <p class="text">Or reach me via <a href="mailto:adulojutadelolaburj@gmail.com">adulojutadelolaburj@gmail.com</a></p>
             </div>
+            <form class="contact-form" id="contact-form">
+                <div class="input-wrap">
+                    <input type="text" id="f-first" name="firstName" class="contact-input" autocomplete="given-name" required>
+                    <label for="f-first">First Name</label>
+                    <i class="icon fa-solid fa-address-card"></i>
+                </div>
+                <div class="input-wrap">
+                    <input type="text" id="f-last" name="lastName" class="contact-input" autocomplete="family-name" required>
+                    <label for="f-last">Last Name</label>
+                    <i class="icon fa-solid fa-address-card"></i>
+                </div>
+                <div class="input-wrap w-100">
+                    <input type="email" id="f-email" name="email" class="contact-input" autocomplete="email" required>
+                    <label for="f-email">Email</label>
+                    <i class="icon fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-wrap textarea w-100">
+                    <textarea id="f-msg" name="message" class="contact-input" required></textarea>
+                    <label for="f-msg">Message</label>
+                    <i class="icon fa-solid fa-message"></i>
+                </div>
+                <div class="contact-buttons w-100">
+                    <input type="submit" value="Send message" class="btn submit">
+                </div>
+                <p class="form-note w-100">Opens your email app with the message ready to send.</p>
+            </form>
         </div>
     </section>
+    </main>
 
     <script src="script.js"></script>
-
 </body>
 </html>
