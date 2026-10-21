@@ -637,25 +637,6 @@ section h2 {
     object-fit: contain;
 }
 
-.code-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 6.4rem;
-    min-width: 6.4rem;
-    padding: 0 1.4rem;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #ffffff;
-    border-radius: 1.4rem;
-    background-color: var(--text-color);
-    box-shadow: 3px 3px 6px var(--shadow-dark);
-    white-space: nowrap;
-}
-
-.badge-cpp { background-color: #00599c; }
-.badge-fastapi { background-color: #05998b; }
-
 .nowrap { white-space: nowrap; }
 
 .fskillrate .dail-wrapper {
