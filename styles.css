@@ -370,21 +370,18 @@ section h2 {
 .aboutme {
     margin-top: 12rem;
     min-height: calc(100vh - 12rem);
-    display: flex;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
+    gap: 4rem;
+    align-items: center;
+    padding: 3rem 3rem 3rem 2rem;
 }
 
 .about-content {
-    position: absolute;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 38%;
     padding: 4.5rem 4rem;
     border-radius: 5rem;
     background-color: var(--primary-color);
     box-shadow: var(--pressed);
-    z-index: 1;
 }
 
 .about-content h1 {
@@ -460,9 +457,7 @@ section h2 {
 }
 
 .aboutme .about-picture {
-    width: 78%;
-    margin-left: auto;
-    padding: 3rem 3rem 3rem 0;
+    height: 100%;
 }
 
 .aboutme .about-picture .image-container {
@@ -475,34 +470,12 @@ section h2 {
     position: relative;
 }
 
-.aboutme .about-picture .left-curve {
-    width: 22%;
-    height: 90%;
-    background-color: var(--primary-color);
-    margin-top: auto;
-    border-top-right-radius: 8rem;
-    position: relative;
-}
-
-.aboutme .about-picture .left-curve::before {
-    content: "";
-    width: 10rem;
-    height: 10rem;
-    position: absolute;
-    bottom: 0;
-    right: -10rem;
-    border-radius: 50%;
-    box-shadow: -5rem 5rem 0 var(--primary-color);
-}
-
 .aboutme .about-picture .right-bottom {
-    width: 45%;
-    height: 18%;
-    min-height: 11rem;
-    background-color: var(--primary-color);
     margin-top: auto;
     margin-left: auto;
-    border-top-left-radius: 8rem;
+    padding: 2.4rem 0 0 2.8rem;
+    background-color: var(--primary-color);
+    border-top-left-radius: 5rem;
     position: relative;
     display: flex;
 }
@@ -950,14 +923,14 @@ textarea.contact-input ~ .icon {
 
 /* ================= LAPTOPS: tighter hero ================= */
 @media (max-width: 1600px) and (min-width: 1101px) {
-    .about-content { width: 44%; padding: 3.5rem 3.2rem; }
+    .about-content { padding: 3.5rem 3.2rem; }
     .about-content .eyebrow { font-size: 1.6rem; }
     .about-content h1 { font-size: clamp(3.6rem, 3vw, 4.6rem); margin-bottom: 2rem; }
     .about-content p { font-size: 2.1rem; line-height: 1.55; margin-bottom: 1.2rem; }
     .highlights { gap: 1rem; margin: 2.2rem 0 2.6rem; }
     .highlights li { font-size: 1.65rem; padding: .9rem 1.6rem; gap: .8rem; }
     .hero-btn { font-size: 1.9rem; padding: 1.4rem 2.8rem; }
-    .aboutme .about-picture .right-bottom span { padding: 1.6rem 3rem; }
+    .aboutme .about-picture .right-bottom span { padding: 1.6rem 3rem; font-size: 2.6rem; }
 }
 
 /* ================= SMALL LAPTOPS ================= */
@@ -965,7 +938,7 @@ textarea.contact-input ~ .icon {
     .navbar a { font-size: 2.8rem; }
     .logo-container { font-size: 3.8rem; }
     .current-select { width: 11rem; }
-    .about-content { width: 46%; }
+    .aboutme { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
     .about-content p { font-size: 2.2rem; }
     .skills { flex-direction: column; }
     .edu-exp, .coding-skills { width: 100%; }
@@ -1088,13 +1061,13 @@ textarea.contact-input ~ .icon {
     .aboutme {
         margin-top: 2rem;
         min-height: auto;
+        display: flex;
         flex-direction: column;
         gap: 3rem;
+        padding: 0;
     }
 
     .about-content {
-        position: static;
-        transform: none;
         width: 100%;
         padding: 4rem 3.5rem;
     }
@@ -1115,10 +1088,6 @@ textarea.contact-input ~ .icon {
         max-height: 55vh;
         width: 100%;
         border-radius: 4rem;
-    }
-
-    .aboutme .about-picture .left-curve {
-        display: none;
     }
 
     .aboutme .about-picture .right-bottom {
