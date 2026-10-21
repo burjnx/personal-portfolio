@@ -30,6 +30,9 @@ html {
     --shadow-dark: #ceced1;
     --raised: -3px -3px 7px var(--shadow-light), 3px 3px 5px var(--shadow-dark);
     --pressed: inset -3px -3px 7px var(--shadow-light), inset 3px 3px 5px var(--shadow-dark);
+    /* Layout frame: fills the screen up to 1920px, then stays centred */
+    --frame: min(100vw, 1920px);
+    --offset: max(0px, (100vw - 1920px) / 2);
 }
 
 body {
@@ -45,9 +48,9 @@ a:focus-visible, button:focus-visible, .contact-input:focus-visible {
 /* ================= SIDEBAR ================= */
 .sticky-sidebar {
     position: fixed;
-    left: 0;
+    left: var(--offset);
     top: 0;
-    width: 25vw;
+    width: calc(var(--frame) * 0.25);
     height: 100vh;
     border-radius: 0 5rem 5rem 0;
     background-color: var(--primary-color);
@@ -69,7 +72,7 @@ a:focus-visible, button:focus-visible, .contact-input:focus-visible {
 }
 
 .profile .image {
-    width: min(30rem, 18vw);
+    width: min(30rem, calc(var(--frame) * 0.18));
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: var(--primary-color);
@@ -212,8 +215,8 @@ a:focus-visible, button:focus-visible, .contact-input:focus-visible {
 .header {
     position: fixed;
     top: 0;
-    left: calc(25vw + 2rem);
-    width: calc(75vw - 2rem);
+    left: calc(var(--offset) + var(--frame) * 0.25 + 2rem);
+    width: calc(var(--frame) * 0.75 - 2rem);
     height: 10rem;
     border-top: 1rem solid white;
     background-color: var(--primary-color);
@@ -349,8 +352,9 @@ a:focus-visible, button:focus-visible, .contact-input:focus-visible {
 
 /* ================= SECTIONS (desktop) ================= */
 section {
-    width: 74.5%;
+    width: calc(var(--frame) * 0.745);
     margin-left: auto;
+    margin-right: var(--offset);
     min-height: 100vh;
     background-color: var(--primary-color);
     position: relative;
@@ -654,7 +658,7 @@ section h2 {
 /* ---------- Projects ---------- */
 .projects {
     padding: 6rem 3rem 6rem 2rem;
-    min-height: auto;
+    min-height: 75vh;
 }
 
 .projects-filter {
@@ -880,6 +884,11 @@ textarea.contact-input ~ .icon {
     text-align: right;
 }
 
+/* ================= VERY WIDE SCREENS ================= */
+@media (min-width: 1921px) {
+    .sticky-sidebar { border-radius: 5rem; }
+}
+
 /* ================= SMALL LAPTOPS ================= */
 @media (max-width: 1350px) {
     .navbar a { font-size: 2.8rem; }
@@ -1070,6 +1079,7 @@ textarea.contact-input ~ .icon {
     .skills,
     .projects {
         padding: 8rem 0 2rem;
+        min-height: auto;
     }
 
     .contacts {
