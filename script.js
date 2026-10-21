@@ -174,6 +174,21 @@ function setupTimeline(list) {
 }
 document.querySelectorAll('.timeline').forEach(setupTimeline);
 
+// ---------- Details pop-ups ----------
+document.querySelectorAll('.details-btn').forEach(btn => {
+  const dialog = document.getElementById(btn.dataset.dialog);
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  const close = () => dialog.close();
+  btn.addEventListener('click', () => {
+    dialog.showModal();
+    document.body.classList.add('dialog-open');
+  });
+  dialog.querySelector('.dialog-close').addEventListener('click', close);
+  // Click on the dark backdrop closes it
+  dialog.addEventListener('click', (e) => { if (e.target === dialog) close(); });
+  dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+});
+
 // ---------- Project filters ----------
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projects = document.querySelectorAll('.project');

@@ -114,17 +114,18 @@
             <h2 class="head-edu">Experience</h2>
             <ol class="timeline">
                 <li>
-                    <div class="when">Nov 2025</div>
+                    <div class="when">Apr – Sep 2025</div>
                     <div class="what">
-                        <strong>Media and Audio-Visual Team</strong>
-                        MIRG-ICAIR 2025, International Conference on AI and Robotics, UNILAG
+                        <strong>Hardware and Embedded Systems Intern (SIWES)</strong>
+                        Nithub (NITDA IT Hub), UNILAG. Built an ESP32 smart home relay board with a web control page, designed a solar monitor PCB in KiCad, and built frontend screens for a React task app.
+                        <button type="button" class="details-btn" data-dialog="nithub-dialog"><i class="fa-solid fa-images"></i> View details</button>
                     </div>
                 </li>
                 <li>
-                    <div class="when">Apr – Sep 2025</div>
+                    <div class="when">Nov 2025</div>
                     <div class="what">
-                        <strong>Hardware and Embedded Systems Intern</strong>
-                        Nithub (NITDA IT Hub), UNILAG. Built an ESP32 smart home switch and frontend screens for a React task app.
+                        <strong>Media and Audio-Visual Volunteer</strong>
+                        Nithub, UNILAG. Ran presentation laptops and projection at MIRG-ICAIR 2025, the International Conference on AI and Robotics.
                     </div>
                 </li>
             </ol>
@@ -226,6 +227,56 @@
         </div>
     </section>
     </main>
+
+    <!-- Nithub SIWES details pop-up -->
+    <dialog class="details-dialog" id="nithub-dialog" aria-labelledby="nithub-title">
+        <div class="dialog-inner">
+            <button type="button" class="dialog-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <p class="dialog-eyebrow">Apr – Sep 2025 · SIWES industrial training</p>
+            <h2 id="nithub-title">Hardware and Embedded Systems Intern</h2>
+            <p class="dialog-org">Nithub (NITDA IT Hub), University of Lagos</p>
+
+            <p class="dialog-lead">Six months at UNILAG's technology hub, moving from circuit theory to building real hardware: programming microcontrollers, soldering and testing boards, and designing PCBs.</p>
+
+            <div class="dialog-cols">
+                <div>
+                    <h3>What I worked on</h3>
+                    <ul>
+                        <li><strong>Smart home relay board:</strong> assembled and soldered a 6-relay ESP32 board and wrote the code that switches each relay, controlled from a web page served by the ESP32.</li>
+                        <li><strong>Smart solar monitor:</strong> drew the schematic and laid out the PCB in KiCad.</li>
+                        <li><strong>Sensor circuits:</strong> built Arduino and ESP32 circuits, including a motion sensor with an LCD readout.</li>
+                        <li><strong>Web:</strong> built frontend screens for the hub's React task-management app.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Skills gained</h3>
+                    <ul class="skill-tags">
+                        <li>C++ (Arduino, ESP32)</li>
+                        <li>KiCad schematics and PCB layout</li>
+                        <li>Soldering and board assembly</li>
+                        <li>Reading datasheets</li>
+                        <li>Sensor integration</li>
+                        <li>IoT and web control</li>
+                        <li>Hardware debugging</li>
+                        <li>React</li>
+                    </ul>
+                    <h3>Lessons learned</h3>
+                    <p>KiCad's design rules took practice to get right. I burnt a PCB and damaged a jumper pad during assembly, which taught me to test carefully before powering a board. Some parts weren't available in Nigeria, so I learned to find working substitutes.</p>
+                </div>
+            </div>
+
+            <h3>Photos</h3>
+            <div class="gallery">
+                <figure><a href="images/siwes/relay-board.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-thumb.jpg" alt="ESP32 six-relay smart home board" loading="lazy"></a><figcaption>ESP32 six-relay smart home board</figcaption></figure>
+                <figure><a href="images/siwes/relay-web-control.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-web-control-thumb.jpg" alt="Web page for switching each relay" loading="lazy"></a><figcaption>Web page served by the ESP32 to switch each relay</figcaption></figure>
+                <figure><a href="images/siwes/relay-board-front.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-front-thumb.jpg" alt="Assembled relay board, front" loading="lazy"></a><figcaption>Assembled and soldered board</figcaption></figure>
+                <figure><a href="images/siwes/relay-board-back.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-back-thumb.jpg" alt="Nithub HomeKit PCB, back" loading="lazy"></a><figcaption>Nithub HomeKit PCB (back)</figcaption></figure>
+                <figure><a href="images/siwes/solar-monitor-schematic.jpg" target="_blank" rel="noopener"><img src="images/siwes/solar-monitor-schematic-thumb.jpg" alt="Smart solar monitor schematic in KiCad" loading="lazy"></a><figcaption>Smart solar monitor schematic (KiCad)</figcaption></figure>
+                <figure><a href="images/siwes/solar-monitor-pcb.jpg" target="_blank" rel="noopener"><img src="images/siwes/solar-monitor-pcb-thumb.jpg" alt="Smart solar monitor PCB layout" loading="lazy"></a><figcaption>Smart solar monitor PCB layout</figcaption></figure>
+                <figure><a href="images/siwes/pir-lcd.jpg" target="_blank" rel="noopener"><img src="images/siwes/pir-lcd-thumb.jpg" alt="Motion sensor circuit with LCD readout" loading="lazy"></a><figcaption>Motion sensor with LCD readout</figcaption></figure>
+            </div>
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
