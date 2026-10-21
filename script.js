@@ -127,42 +127,41 @@ const skillObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fskillrate').forEach(card => skillObserver.observe(card));
 
 // ---------- Education / Experience timeline animation ----------
-// A dark fill draws down the line with a dot at its tip. As the dot reaches
-// each circle, the circle lights up and that entry slides up into view.
+// Each circle rises from the bottom of its line to its place, then that
+// entry's date, title and description ease in one line at a time.
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function setupTimeline(list) {
   const items = [...list.querySelectorAll('li')];
-  if (!hasGsap || reduceMotion || !items.length) {
-    items.forEach(li => li.classList.add('is-on'));
-    return;
-  }
-  const fill = document.createElement('span');
-  fill.className = 'tl-fill';
-  const dot = document.createElement('span');
-  dot.className = 'tl-dot';
-  list.prepend(fill, dot);
+  if (!hasGsap || reduceMotion || !items.length) return;   // everything just shows normally
+
+  // Split each entry into lines: date, title, description
+  const lines = items.map(li => {
+    const what = li.querySelector('.what');
+    const strong = what.querySelector('strong');
+    const desc = document.createElement('span');
+    [...what.childNodes].filter(n => n !== strong).forEach(n => desc.appendChild(n));
+    what.appendChild(desc);
+    const parts = [li.querySelector('.when'), strong, desc];
+    parts.forEach(el => el.classList.add('tl-line'));
+    return parts;
+  });
   list.classList.add('tl-ready');
 
+  // Each circle starts at the bottom of the line, hidden
+  const startOffsets = items.map(li => {
+    const top = li.offsetTop + parseFloat(getComputedStyle(li, '::before').top);
+    const size = parseFloat(getComputedStyle(li, '::before').height);
+    return Math.max(0, list.offsetHeight - top - size);
+  });
+  items.forEach((li, i) => gsap.set(li, { '--dy': `${startOffsets[i]}px`, '--co': 0 }));
+
   const play = () => {
-    // Circle centres, measured now so it's right at any screen size
-    const stops = items.map(li => {
-      const circle = parseFloat(getComputedStyle(li, '::before').height) || 0;
-      return li.offsetTop + parseFloat(getComputedStyle(li, '::before').top) + circle / 2;
+    const tl = gsap.timeline();
+    items.forEach((li, i) => {
+      tl.to(li, { '--dy': '0px', '--co': 1, duration: 1.2, ease: 'power2.out' }, i ? '-=0.5' : 0)
+        .to(lines[i], { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', stagger: 0.25 }, '-=0.35');
     });
-    const tl = gsap.timeline({
-      onComplete: () => { fill.style.height = '100%'; }
-    });
-    tl.set(dot, { y: 0, opacity: 1, scale: 1 });
-    stops.forEach((y, i) => {
-      const text = items[i].querySelectorAll('.when, .what');
-      tl.to(fill, { height: y, duration: i ? 0.55 : 0.35, ease: 'power2.out' })
-        .to(dot, { y, duration: i ? 0.55 : 0.35, ease: 'power2.out' }, '<')
-        .add(() => items[i].classList.add('is-on'))
-        .to(text, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.08 }, '-=0.15');
-    });
-    tl.to(fill, { height: list.offsetHeight, duration: 0.4, ease: 'power1.out' })
-      .to(dot, { y: list.offsetHeight, opacity: 0, scale: 0.4, duration: 0.4, ease: 'power1.out' }, '<');
   };
 
   const io = new IntersectionObserver((entries) => {
