@@ -125,7 +125,7 @@
                     <div class="when">Nov 2025</div>
                     <div class="what">
                         <strong>Media and Audio-Visual Volunteer</strong>
-                        Nithub, UNILAG. Ran presentation laptops and projection at MIRG-ICAIR 2025, the International Conference on AI and Robotics.
+                        Nithub, UNILAG. Ran presentation laptops and projection at <span class="nowrap">MIRG-ICAIR</span> 2025, the International Conference on AI and Robotics.
                     </div>
                 </li>
             </ol>
@@ -158,12 +158,12 @@
                     <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
                 <div class="fskillrate" data-target="33">
-                    <div class="code-img"><span class="code-badge">C/C++</span></div>
+                    <div class="code-img"><span class="code-badge badge-cpp">C/C++</span></div>
                     <div class="dail-wrapper"><div class="ticks"></div><div class="knob-ind"><div class="needle"></div></div></div>
                     <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
                 <div class="fskillrate" data-target="27">
-                    <div class="code-img"><span class="code-badge">FastAPI</span></div>
+                    <div class="code-img"><span class="code-badge badge-fastapi">FastAPI</span></div>
                     <div class="dail-wrapper"><div class="ticks"></div><div class="knob-ind"><div class="needle"></div></div></div>
                     <div class="percentage"><div class="percentage-text">0%</div></div>
                 </div>
@@ -175,19 +175,33 @@
         <h2 class="project-head">My Projects</h2>
         <div class="projects-filter">
             <button type="button" class="filter-btn active" data-filter="all">All</button>
-            <button type="button" class="filter-btn" data-filter="websites">Websites</button>
-            <button type="button" class="filter-btn" data-filter="web-apps">Web Apps</button>
+            <button type="button" class="filter-btn" data-filter="hardware">Hardware</button>
+            <button type="button" class="filter-btn" data-filter="web">Web</button>
         </div>
         <div class="project-container">
-            <a class="project" data-category="websites" href="https://github.com/burjnx/personal-portfolio" target="_blank" rel="noopener">
-                <div class="project-img"><img src="images/portfolio.png" alt="Portfolio website screenshot"></div>
-                <span class="project-name">Portfolio Website</span>
-                <span class="project-tech">HTML · CSS · JavaScript</span>
-            </a>
-            <a class="project" data-category="web-apps" href="https://github.com/burjnx/tasker-auth-demov1" target="_blank" rel="noopener">
+            <button type="button" class="project" data-category="hardware" data-dialog="fyp-dialog">
+                <div class="project-img"><img src="images/fyp/system-diagram.svg" alt="System diagram of the solar-powered sensor node"></div>
+                <span class="project-name">ML Power Manager for a Solar IoT Node</span>
+                <span class="project-tech">ESP32 · TensorFlow Lite · Q-learning</span>
+                <span class="project-cta"><i class="fa-solid fa-circle-info"></i> Final-year project · View details</span>
+            </button>
+            <button type="button" class="project" data-category="hardware" data-dialog="relay-dialog">
+                <div class="project-img"><img src="images/siwes/relay-board-thumb.jpg" alt="ESP32 six-relay smart home board" style="object-position: center 70%"></div>
+                <span class="project-name">Smart Home Relay Board</span>
+                <span class="project-tech">ESP32 · C++ · PCB assembly</span>
+                <span class="project-cta"><i class="fa-solid fa-images"></i> SIWES project · View details</span>
+            </button>
+            <a class="project" data-category="web" href="https://github.com/burjnx/tasker-auth-demov1" target="_blank" rel="noopener">
                 <div class="project-img"><img src="images/tasker.png" alt="Tasker task management app screenshot"></div>
                 <span class="project-name">Tasker App</span>
                 <span class="project-tech">React · Tailwind · Nithub team</span>
+                <span class="project-cta"><i class="fa-brands fa-github"></i> View on GitHub</span>
+            </a>
+            <a class="project" data-category="web" href="https://github.com/burjnx/personal-portfolio" target="_blank" rel="noopener">
+                <div class="project-img"><img src="images/portfolio.png" alt="Portfolio website screenshot"></div>
+                <span class="project-name">This Portfolio</span>
+                <span class="project-tech">HTML · CSS · JavaScript</span>
+                <span class="project-cta"><i class="fa-brands fa-github"></i> View on GitHub</span>
             </a>
         </div>
     </section>
@@ -274,6 +288,98 @@
                 <figure><a href="images/siwes/solar-monitor-schematic.jpg" target="_blank" rel="noopener"><img src="images/siwes/solar-monitor-schematic-thumb.jpg" alt="Smart solar monitor schematic in KiCad" loading="lazy"></a><figcaption>Smart solar monitor schematic (KiCad)</figcaption></figure>
                 <figure><a href="images/siwes/solar-monitor-pcb.jpg" target="_blank" rel="noopener"><img src="images/siwes/solar-monitor-pcb-thumb.jpg" alt="Smart solar monitor PCB layout" loading="lazy"></a><figcaption>Smart solar monitor PCB layout</figcaption></figure>
                 <figure><a href="images/siwes/pir-lcd.jpg" target="_blank" rel="noopener"><img src="images/siwes/pir-lcd-thumb.jpg" alt="Motion sensor circuit with LCD readout" loading="lazy"></a><figcaption>Motion sensor with LCD readout</figcaption></figure>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Final-year project pop-up -->
+    <dialog class="details-dialog" id="fyp-dialog" aria-labelledby="fyp-title">
+        <div class="dialog-inner">
+            <button type="button" class="dialog-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <p class="dialog-eyebrow">Final-year project · University of Lagos · 2026</p>
+            <h2 id="fyp-title">ML-Based Power Management for a Solar-Powered IoT Sensor Node</h2>
+            <p class="dialog-org">Embedded machine learning on an ESP32</p>
+
+            <p class="dialog-lead">Small solar-powered sensors either die on cloudy days or waste energy measuring too often when power is plentiful. I built a sensor node that predicts its own battery charge and decides how often to work, so it keeps running without wasting energy.</p>
+
+            <figure class="dialog-figure">
+                <img src="images/fyp/system-diagram.svg" alt="System diagram: solar panel, MPPT charger and battery power an ESP32 that runs an LSTM forecaster and a Q-learning controller, reads DHT22 and BH1750 sensors and sends data over LoRa">
+            </figure>
+
+            <h3>Results</h3>
+            <div class="stat-grid">
+                <div class="stat"><span class="stat-num">90%</span><span class="stat-label">lower forecast error than a simple baseline</span></div>
+                <div class="stat"><span class="stat-num">0</span><span class="stat-label">battery depletions in a year-long simulation</span></div>
+                <div class="stat"><span class="stat-num">53 KB</span><span class="stat-label">model running on the ESP32 itself</span></div>
+                <div class="stat"><span class="stat-num">Best</span><span class="stat-label">quality of service of the 4 strategies tested</span></div>
+            </div>
+
+            <div class="dialog-cols">
+                <div>
+                    <h3>How it works</h3>
+                    <ul>
+                        <li><strong>Data:</strong> built a battery simulator on one year of hourly NASA POWER solar data for Lagos.</li>
+                        <li><strong>Forecast:</strong> trained an LSTM network to predict the battery's state of charge.</li>
+                        <li><strong>Decide:</strong> trained a Q-learning agent to choose the sensor's duty cycle, aiming for energy-neutral operation.</li>
+                        <li><strong>Deploy:</strong> converted the model to an int8 TensorFlow Lite Micro model and ran it on a real ESP32 with live DHT22 and BH1750 sensors.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Skills used</h3>
+                    <ul class="skill-tags">
+                        <li>Python</li>
+                        <li>TensorFlow / Keras</li>
+                        <li>TensorFlow Lite Micro</li>
+                        <li>Reinforcement learning</li>
+                        <li>ESP32 (C++)</li>
+                        <li>I2C sensors</li>
+                        <li>Solar charging</li>
+                    </ul>
+                    <h3>Challenges</h3>
+                    <p>The first LSTM used an operation the microcontroller library doesn't support, and inference kept crashing until I traced it to the ESP32's default task stack being too small. I retrained a smaller 6-hour model so it would fit. The int8 model is less accurate near full charge, a known effect of quantisation that I measured and documented.</p>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Relay board pop-up -->
+    <dialog class="details-dialog" id="relay-dialog" aria-labelledby="relay-title">
+        <div class="dialog-inner">
+            <button type="button" class="dialog-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <p class="dialog-eyebrow">SIWES project · Nithub, UNILAG · 2025</p>
+            <h2 id="relay-title">Smart Home Relay Board</h2>
+            <p class="dialog-org">ESP32 · C++ · PCB assembly</p>
+
+            <p class="dialog-lead">A six-relay board built around an ESP32 that switches home appliances from a web page, with no app to install.</p>
+
+            <div class="dialog-cols">
+                <div>
+                    <h3>What I did</h3>
+                    <ul>
+                        <li>Soldered and assembled the PCB: relays, resistors, capacitors and the ESP32.</li>
+                        <li>Wrote the C++ firmware that switches each relay.</li>
+                        <li>Set up a control page hosted on the ESP32, with an on/off toggle and live status for each relay.</li>
+                        <li>Tested every channel before connecting a load.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Skills used</h3>
+                    <ul class="skill-tags">
+                        <li>ESP32</li>
+                        <li>C++ (Arduino)</li>
+                        <li>Soldering</li>
+                        <li>Relay circuits</li>
+                        <li>Embedded web server</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Photos</h3>
+            <div class="gallery">
+                <figure><a href="images/siwes/relay-board.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-thumb.jpg" alt="ESP32 six-relay smart home board" loading="lazy"></a><figcaption>The finished board</figcaption></figure>
+                <figure><a href="images/siwes/relay-web-control.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-web-control-thumb.jpg" alt="Web page for switching each relay" loading="lazy"></a><figcaption>Control page hosted on the ESP32</figcaption></figure>
+                <figure><a href="images/siwes/relay-board-front.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-front-thumb.jpg" alt="Assembled relay board, front" loading="lazy"></a><figcaption>Assembled and soldered</figcaption></figure>
+                <figure><a href="images/siwes/relay-board-back.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-back-thumb.jpg" alt="Nithub HomeKit PCB, back" loading="lazy"></a><figcaption>Nithub HomeKit PCB (back)</figcaption></figure>
             </div>
         </div>
     </dialog>

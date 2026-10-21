@@ -638,13 +638,25 @@ section h2 {
 }
 
 .code-badge {
-    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.4rem;
+    min-width: 6.4rem;
+    padding: 0 1.4rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    padding: 1rem 1.6rem;
+    color: #ffffff;
     border-radius: 1.4rem;
-    box-shadow: var(--raised);
+    background-color: var(--text-color);
+    box-shadow: 3px 3px 6px var(--shadow-dark);
     white-space: nowrap;
 }
+
+.badge-cpp { background-color: #00599c; }
+.badge-fastapi { background-color: #05998b; }
+
+.nowrap { white-space: nowrap; }
 
 .fskillrate .dail-wrapper {
     position: relative;
@@ -961,6 +973,10 @@ body.dialog-open {
 .project {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
     gap: .6rem;
     padding: 1.5rem 1.5rem 2.5rem;
     border-radius: 2.5rem;
@@ -1004,6 +1020,78 @@ body.dialog-open {
     font-size: 1.9rem;
     color: var(--light-text-color);
     padding: 0 .5rem;
+}
+
+.project-cta {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-top: 1.2rem;
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.project:hover .project-cta {
+    text-decoration: underline;
+    text-underline-offset: .4rem;
+}
+
+/* ---------- Pop-up extras: diagram + result tiles ---------- */
+.dialog-figure {
+    margin: 0 0 3.5rem;
+    padding: 1.2rem;
+    border-radius: 2rem;
+    box-shadow: var(--raised);
+}
+
+.dialog-figure img {
+    display: block;
+    width: 100%;
+    border-radius: 1.4rem;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    padding: 2.2rem 2rem;
+    border-radius: 2rem;
+    box-shadow: var(--raised);
+}
+
+.stat-num {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--light-text-color);
+}
+
+@media (max-width: 700px) {
+    .stat-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .stat { padding: 2rem 1.8rem; }
+    .stat-label { font-size: 2.1rem; }
+}
+
+/* 4 project cards: 4 across on wide screens, 2x2 on laptops and tablets, 1 column on phones */
+@media (min-width: 601px) {
+    .project-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1700px) {
+    .project-container { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 /* ---------- Contact ---------- */

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="Poppins, 'Segoe UI', Arial, sans-serif">
+  <title>System diagram: ML-based power management for a solar-powered IoT sensor node</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c3e50"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="3" dy="4" stdDeviation="4" flood-color="#b8bec7" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="600" fill="#ecf0f3"/>
+
+  <!-- Section labels -->
+  <text x="133" y="44" text-anchor="middle" font-size="17" font-weight="600" fill="#7d8a9c" letter-spacing="1.5">POWER</text>
+  <text x="480" y="44" text-anchor="middle" font-size="17" font-weight="600" fill="#7d8a9c" letter-spacing="1.5">BRAIN</text>
+  <text x="827" y="44" text-anchor="middle" font-size="17" font-weight="600" fill="#7d8a9c" letter-spacing="1.5">SENSE + SEND</text>
+
+  <!-- Power chain -->
+  <g filter="url(#soft)">
+    <rect x="20" y="68" width="226" height="104" rx="18" fill="#ffffff"/>
+    <rect x="20" y="248" width="226" height="104" rx="18" fill="#ffffff"/>
+    <rect x="20" y="428" width="226" height="104" rx="18" fill="#ffffff"/>
+  </g>
+  <!-- solar panel icon -->
+  <g transform="translate(40 96)">
+    <rect x="0" y="0" width="44" height="30" rx="3" fill="#2c3e50"/>
+    <path d="M15 0 V30 M29 0 V30 M0 15 H44" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="48" cy="-6" r="6" fill="#f5b700"/>
+  </g>
+  <text x="100" y="112" font-size="20" font-weight="600" fill="#2c3e50">Solar panel</text>
+  <text x="100" y="138" font-size="15" fill="#5b6878">6 V, 3 W</text>
+
+  <!-- charger icon -->
+  <g transform="translate(40 276)">
+    <rect x="0" y="0" width="44" height="44" rx="8" fill="#2c3e50"/>
+    <path d="M25 6 L14 25 H23 L19 38 L31 18 H22 Z" fill="#f5b700"/>
+  </g>
+  <text x="100" y="292" font-size="20" font-weight="600" fill="#2c3e50">MPPT charger</text>
+  <text x="100" y="318" font-size="15" fill="#5b6878">CN3791</text>
+
+  <!-- battery icon -->
+  <g transform="translate(40 462)">
+    <rect x="0" y="4" width="40" height="34" rx="5" fill="none" stroke="#2c3e50" stroke-width="4"/>
+    <rect x="40" y="14" width="6" height="14" rx="2" fill="#2c3e50"/>
+    <rect x="6" y="10" width="20" height="22" rx="2" fill="#3fb36b"/>
+  </g>
+  <text x="100" y="472" font-size="20" font-weight="600" fill="#2c3e50">Battery</text>
+  <text x="100" y="498" font-size="15" fill="#5b6878">18650 Li-ion cell</text>
+
+  <path d="M133 172 V244" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M133 352 V424" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- ESP32 brain -->
+  <rect x="300" y="68" width="360" height="464" rx="26" fill="#2c3e50" filter="url(#soft)"/>
+  <text x="480" y="112" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">ESP32</text>
+  <text x="480" y="138" text-anchor="middle" font-size="15" fill="#c3ccd6">runs both models on the device</text>
+
+  <rect x="326" y="164" width="308" height="140" rx="16" fill="#ecf0f3"/>
+  <text x="346" y="198" font-size="19" font-weight="700" fill="#2c3e50">1. LSTM forecaster</text>
+  <text x="346" y="226" font-size="15.5" fill="#2c3e50">Predicts the battery's charge</text>
+  <text x="346" y="248" font-size="15.5" fill="#2c3e50">from the last 6 hours of data</text>
+  <text x="346" y="280" font-size="14" fill="#5b6878">int8 TensorFlow Lite model, 53 KB</text>
+
+  <path d="M480 304 V350" stroke="#ecf0f3" stroke-width="3" marker-end="url(#arrowLight)"/>
+  <defs>
+    <marker id="arrowLight" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ecf0f3"/>
+    </marker>
+  </defs>
+
+  <rect x="326" y="356" width="308" height="140" rx="16" fill="#ecf0f3"/>
+  <text x="346" y="390" font-size="19" font-weight="700" fill="#2c3e50">2. Q-learning controller</text>
+  <text x="346" y="418" font-size="15.5" fill="#2c3e50">Chooses how often to wake,</text>
+  <text x="346" y="440" font-size="15.5" fill="#2c3e50">measure and transmit</text>
+  <text x="346" y="472" font-size="14" fill="#5b6878">400-state policy table</text>
+
+  <!-- battery to ESP32 -->
+  <path d="M246 480 H296" stroke="#2c3e50" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="271" y="468" text-anchor="middle" font-size="13" fill="#5b6878">power</text>
+
+  <!-- Sensors -->
+  <g filter="url(#soft)">
+    <rect x="714" y="68" width="226" height="200" rx="18" fill="#ffffff"/>
+    <rect x="714" y="388" width="226" height="144" rx="18" fill="#ffffff"/>
+  </g>
+  <text x="734" y="104" font-size="20" font-weight="600" fill="#2c3e50">Sensors</text>
+  <circle cx="742" cy="140" r="7" fill="#e67e22"/>
+  <text x="758" y="146" font-size="16" fill="#2c3e50">DHT22</text>
+  <text x="758" y="166" font-size="13.5" fill="#5b6878">temperature, humidity</text>
+  <circle cx="742" cy="196" r="7" fill="#f5b700"/>
+  <text x="758" y="202" font-size="16" fill="#2c3e50">BH1750</text>
+  <text x="758" y="222" font-size="13.5" fill="#5b6878">light level</text>
+  <text x="734" y="252" font-size="13.5" fill="#5b6878">over I2C</text>
+
+  <path d="M714 168 H666" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- LoRa -->
+  <g transform="translate(736 414)" fill="none" stroke="#2c3e50" stroke-width="3" stroke-linecap="round">
+    <path d="M14 34 V12"/>
+    <path d="M4 6 A14 14 0 0 1 24 6"/>
+    <path d="M-2 0 A22 22 0 0 1 30 0"/>
+  </g>
+  <text x="780" y="432" font-size="20" font-weight="600" fill="#2c3e50">LoRa radio</text>
+  <text x="780" y="458" font-size="15" fill="#5b6878">SX1278</text>
+  <text x="734" y="500" font-size="13.5" fill="#5b6878">sends readings at the</text>
+  <text x="734" y="518" font-size="13.5" fill="#5b6878">rate the controller picks</text>
+
+  <path d="M660 446 H710" stroke="#2c3e50" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Footer -->
+  <text x="480" y="578" text-anchor="middle" font-size="15" fill="#5b6878">Trained on one year of hourly NASA POWER solar data for Lagos</text>
+</svg>

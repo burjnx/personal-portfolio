@@ -175,17 +175,20 @@ function setupTimeline(list) {
 document.querySelectorAll('.timeline').forEach(setupTimeline);
 
 // ---------- Details pop-ups ----------
-document.querySelectorAll('.details-btn').forEach(btn => {
-  const dialog = document.getElementById(btn.dataset.dialog);
+// Any element with data-dialog="<id>" opens that pop-up
+document.querySelectorAll('[data-dialog]').forEach(trigger => {
+  const dialog = document.getElementById(trigger.dataset.dialog);
   if (!dialog || typeof dialog.showModal !== 'function') return;
-  const close = () => dialog.close();
-  btn.addEventListener('click', () => {
+  trigger.addEventListener('click', () => {
     dialog.showModal();
+    dialog.querySelector('.dialog-inner').scrollTop = 0;
     document.body.classList.add('dialog-open');
   });
-  dialog.querySelector('.dialog-close').addEventListener('click', close);
+});
+document.querySelectorAll('.details-dialog').forEach(dialog => {
+  dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
   // Click on the dark backdrop closes it
-  dialog.addEventListener('click', (e) => { if (e.target === dialog) close(); });
+  dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
 });
 
