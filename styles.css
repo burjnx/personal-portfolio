@@ -567,6 +567,46 @@ section h2 {
     box-shadow: var(--raised);
 }
 
+/* Lit circle: the entry has been reached */
+.timeline li.is-on::before {
+    border-color: var(--text-color);
+    background: radial-gradient(circle, var(--text-color) 0 32%, var(--primary-color) 34%);
+    transition: border-color .3s ease, background .3s ease;
+}
+
+/* Animated fill that draws down the line, with a dot at its tip */
+.timeline .tl-fill {
+    position: absolute;
+    left: .35rem;
+    top: 0;
+    width: .7rem;
+    height: 0;
+    border-radius: 3rem;
+    background-color: var(--text-color);
+    pointer-events: none;
+}
+
+.timeline .tl-dot {
+    position: absolute;
+    left: -.4rem;
+    top: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-top: -1.1rem;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    box-shadow: 0 0 0 .5rem rgba(44, 62, 80, .15);
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Hidden until the timeline animates in (only applied when JS + motion are available) */
+.timeline.tl-ready li .when,
+.timeline.tl-ready li .what {
+    opacity: 0;
+    transform: translateY(2.5rem);
+}
+
 .timeline .when {
     font-size: 2rem;
     font-weight: 600;
