@@ -19,7 +19,7 @@ My personal portfolio site: who I am, my skills, projects and how to reach me.
 ## Built with
 
 - HTML5, CSS3 and vanilla JavaScript
-- Google Fonts (Poppins, Courier Prime) and Font Awesome icons
+- Google Fonts (Poppins), Font Awesome icons and GSAP for small animations
 - No frameworks or templates
 
 ## Run it locally
