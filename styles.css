@@ -377,9 +377,10 @@ section h2 {
 .about-content {
     position: absolute;
     left: 2rem;
-    top: 14rem;
-    width: 36%;
-    padding: 4rem 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38%;
+    padding: 4.5rem 4rem;
     border-radius: 5rem;
     background-color: var(--primary-color);
     box-shadow: var(--pressed);
@@ -399,6 +400,65 @@ section h2 {
     margin-bottom: 1.5rem;
 }
 
+.about-content .eyebrow {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: var(--light-text-color);
+    margin-bottom: 1rem;
+}
+
+.highlights {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin: 3rem 0 3.5rem;
+}
+
+.highlights li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 2rem;
+    font-size: 1.9rem;
+    font-weight: 500;
+    border-radius: 5rem;
+    box-shadow: var(--raised);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hero-btn {
+    padding: 1.6rem 3.4rem;
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    border-radius: 5rem;
+    box-shadow: var(--raised);
+    transition: box-shadow .2s ease;
+}
+
+.hero-btn.primary {
+    color: var(--primary-color);
+    background-color: var(--text-color);
+    box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 7px var(--shadow-light);
+}
+
+.hero-btn:hover {
+    box-shadow: var(--pressed);
+}
+
+.hero-btn.primary:hover {
+    background-color: #1f2d3a;
+    box-shadow: 1px 1px 3px var(--shadow-dark);
+}
+
 .aboutme .about-picture {
     width: 78%;
     margin-left: auto;
@@ -410,8 +470,7 @@ section h2 {
     height: 100%;
     min-height: 60rem;
     background: url(images/aboutmain.PNG) center / cover;
-    border-top-right-radius: 5rem;
-    border-bottom-right-radius: 5rem;
+    border-radius: 5rem;
     display: flex;
     position: relative;
 }
@@ -471,7 +530,7 @@ section h2 {
 .aboutme .about-picture .right-bottom span {
     margin: auto;
     padding: 2rem 4rem;
-    font-size: clamp(2.6rem, 2.2vw, 4rem);
+    font-size: clamp(2.4rem, 1.8vw, 3.6rem);
     white-space: nowrap;
     color: var(--text-color);
     border-radius: 5rem;
@@ -889,12 +948,24 @@ textarea.contact-input ~ .icon {
     .sticky-sidebar { border-radius: 5rem; }
 }
 
+/* ================= LAPTOPS: tighter hero ================= */
+@media (max-width: 1600px) and (min-width: 1101px) {
+    .about-content { width: 44%; padding: 3.5rem 3.2rem; }
+    .about-content .eyebrow { font-size: 1.6rem; }
+    .about-content h1 { font-size: clamp(3.6rem, 3vw, 4.6rem); margin-bottom: 2rem; }
+    .about-content p { font-size: 2.1rem; line-height: 1.55; margin-bottom: 1.2rem; }
+    .highlights { gap: 1rem; margin: 2.2rem 0 2.6rem; }
+    .highlights li { font-size: 1.65rem; padding: .9rem 1.6rem; gap: .8rem; }
+    .hero-btn { font-size: 1.9rem; padding: 1.4rem 2.8rem; }
+    .aboutme .about-picture .right-bottom span { padding: 1.6rem 3rem; }
+}
+
 /* ================= SMALL LAPTOPS ================= */
 @media (max-width: 1350px) {
     .navbar a { font-size: 2.8rem; }
     .logo-container { font-size: 3.8rem; }
     .current-select { width: 11rem; }
-    .about-content { width: 40%; top: 10rem; }
+    .about-content { width: 46%; }
     .about-content p { font-size: 2.2rem; }
     .skills { flex-direction: column; }
     .edu-exp, .coding-skills { width: 100%; }
@@ -1023,6 +1094,7 @@ textarea.contact-input ~ .icon {
 
     .about-content {
         position: static;
+        transform: none;
         width: 100%;
         padding: 4rem 3.5rem;
     }
