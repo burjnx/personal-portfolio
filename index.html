@@ -3,373 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tadelola Aduloju | Portfolio</title>
-    <meta name="description" content="Tadelola Aduloju: Electrical and Electronics Engineering graduate (UNILAG) working in embedded systems, machine learning and web development.">
+    <title>Tadelola Aduloju Burgess | Electrical &amp; Electronics Engineering Graduate</title>
+    <meta name="description" content="Tadelola Aduloju Burgess: Electrical and Electronics Engineering graduate from the University of Lagos, working across embedded systems, machine learning and web development.">
+    <link rel="preload" href="fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/87ac3cf49e.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-    <aside class="sticky-sidebar">
-        <div class="profile">
-            <div class="image">
-                <div class="innerimg"><img src="images/profile1.jpg" alt="Tadelola Aduloju"></div>
-            </div>
-            <div class="name">Tadelola</div>
-            <div class="title">Electrical &amp; Electronics<br>Engineering Graduate</div>
-            <div class="socials">
-                <a href="https://github.com/burjnx" class="git" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="mailto:adulojutadelolaburj@gmail.com" class="mail" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <div class="button">
-                <button type="button" id="message-btn">Message</button>
-            </div>
-            <div class="contact">
-                <div class="contact-item copyable" id="email-container" title="Click to copy">
-                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                    <div class="contact-text">
-                        <p>EMAIL</p>
-                        <p id="emailAddr">adulojutadelolaburj@gmail.com</p>
-                    </div>
-                    <p id="copied-msg" class="copiedmsg">Copied!</p>
-                </div>
-                <div class="contact-item copyable" id="phone-container" title="Click to copy">
-                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-                    <div class="contact-text">
-                        <p>PHONE</p>
-                        <p id="phoneN0">+234-816-896-3852</p>
-                    </div>
-                    <p id="copiedN0" class="copiedmsg">Copied!</p>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div class="contact-text">
-                        <p>LOCATION</p>
-                        <p>Lagos, Nigeria</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </aside>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <header class="header">
-        <div class="current-space"></div>
-        <a href="#about" class="logo-container">
-            <span class="logo">About me</span>
-            <span class="underline"></span>
-        </a>
-        <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-        <nav class="navbar">
-            <div class="current-select"></div>
-            <a href="#about" class="nav-link active" data-display-text="About me">About</a>
-            <a href="#skills" class="nav-link" data-display-text="My skills">Skills</a>
-            <a href="#projects" class="nav-link" data-display-text="My Portfolio">Projects</a>
-            <a href="#contacts" class="nav-link" data-display-text="Contact me">Contact</a>
-        </nav>
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a href="#top" class="brand"><span class="brand-mark">TAB</span><span class="brand-name">Tadelola Aduloju Burgess</span></a>
+            <nav class="nav-links" aria-label="Sections">
+                <a href="#work">Work</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="Tadelola-Aduloju-Burgess-CV.pdf" class="nav-cv" download>CV <i class="fa-solid fa-arrow-down"></i></a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-    <!--section aboutme-->
-    <section class="aboutme" id="about">
-        <div class="about-content">
-            <p class="eyebrow">Engineering graduate · University of Lagos</p>
-            <h1>Hey, I'm Tadelola</h1>
-            <p>I'm a UNILAG engineering graduate who builds across hardware and software, from ESP32 devices to React web apps.</p>
-            <p>For my final-year project, I put a machine learning model on an ESP32 to manage a solar-powered sensor node.</p>
-            <ul class="highlights">
-                <li><i class="fa-solid fa-microchip"></i> Embedded systems</li>
-                <li><i class="fa-solid fa-brain"></i> Machine learning</li>
-                <li><i class="fa-solid fa-code"></i> Web development</li>
-            </ul>
-            <div class="hero-actions">
-                <a href="#projects" class="hero-btn primary">View my work</a>
-                <a href="Tadelola-Aduloju-Burgess-CV.pdf" class="hero-btn" download><i class="fa-solid fa-download"></i> Download CV</a>
-            </div>
-        </div>
-        <div class="about-picture">
-            <div class="image-container" role="img" aria-label="ESP32 smart home relay board I assembled and programmed during SIWES">
-                <div class="right-bottom">
-                    <span>ESP32 relay board · SIWES</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- section skills -->
-    <section class="skills" id="skills">
-        <div class="edu-exp">
-            <h2 class="head-edu">Education</h2>
-            <ol class="timeline">
-                <li>
-                    <div class="when">2020 – 2026</div>
-                    <div class="what">
-                        <strong>University of Lagos (UNILAG)</strong>
-                        B.Sc. Electrical and Electronics Engineering
+    <main id="main">
+        <!-- Intro -->
+        <section class="hero" id="top">
+            <div class="wrap hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Electronics · Embedded · Web</p>
+                    <h1>Tadelola Aduloju Burgess</h1>
+                    <p class="hero-role">Electrical &amp; Electronics Engineering Graduate, University of Lagos</p>
+                    <p class="hero-bio">I build across hardware and software: programming microcontrollers, assembling and testing circuits, running machine learning on an ESP32, and building web interfaces in React.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Get in touch</a>
+                        <a href="Tadelola-Aduloju-Burgess-CV.pdf" class="btn" download><i class="fa-solid fa-download"></i> Download CV</a>
+                        <a href="https://github.com/burjnx" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
                     </div>
-                </li>
-            </ol>
-            <h2 class="head-edu">Experience</h2>
-            <ol class="timeline">
-                <li>
-                    <div class="when">Apr – Sep 2025</div>
-                    <div class="what">
-                        <strong>Hardware and Embedded Systems Intern (SIWES)</strong>
-                        Nithub (NITDA IT Hub), UNILAG. Programmed Arduino and ESP32 microcontrollers, assembled and soldered an ESP32 relay board and wrote its switching code, learned KiCad, and built frontend screens for a React task app.
-                        <button type="button" class="details-btn" data-dialog="nithub-dialog"><i class="fa-solid fa-images"></i> View details</button>
-                    </div>
-                </li>
-                <li>
-                    <div class="when">Nov 2025</div>
-                    <div class="what">
-                        <strong>Media and Audio-Visual Volunteer</strong>
-                        Nithub, UNILAG. Ran presentation laptops and projection at <span class="nowrap">MIRG-ICAIR</span> 2025, the International Conference on AI and Robotics.
-                    </div>
-                </li>
-            </ol>
-        </div>
-        <div class="coding-skills">
-            <h2 class="head-edu">Skills</h2>
-            <div class="skill-groups">
-                <div class="skill-group">
-                    <h3><i class="fa-solid fa-microchip"></i> Engineering and Hardware</h3>
-                    <ul class="skill-tags">
-                        <li>ESP32</li><li>Arduino</li><li>Circuit assembly</li><li>Soldering</li><li>Multimeter</li><li>Lab test equipment</li><li>Solar charging circuits</li><li>KiCad (basics)</li><li>Proteus</li>
-                    </ul>
+                    <p class="hero-meta"><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria <span class="dot">·</span> Open to engineering and technology roles</p>
                 </div>
-                <div class="skill-group">
-                    <h3><i class="fa-solid fa-code"></i> Programming and Web</h3>
-                    <ul class="skill-tags">
-                        <li>Python</li><li>C/C++ (Arduino)</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>React</li><li>Git and GitHub</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3><i class="fa-solid fa-brain"></i> Data and Machine Learning</h3>
-                    <ul class="skill-tags">
-                        <li>TensorFlow / Keras</li><li>TensorFlow Lite Micro</li><li>NumPy</li><li>pandas</li><li>Google Colab</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3><i class="fa-solid fa-toolbox"></i> Office and Tools</h3>
-                    <ul class="skill-tags">
-                        <li>Word</li><li>Excel</li><li>PowerPoint</li><li>MATLAB (coursework)</li><li>Arduino IDE</li>
-                    </ul>
+                <div class="hero-photo">
+                    <img src="images/profile1.jpg" alt="Tadelola Aduloju Burgess" width="768" height="638">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="projects" id="projects">
-        <h2 class="project-head">My Projects</h2>
-        <div class="projects-filter">
-            <button type="button" class="filter-btn active" data-filter="all">All</button>
-            <button type="button" class="filter-btn" data-filter="hardware">Hardware</button>
-            <button type="button" class="filter-btn" data-filter="web">Web</button>
-        </div>
-        <div class="project-container">
-            <button type="button" class="project" data-category="hardware" data-dialog="fyp-dialog">
-                <div class="project-img"><img src="images/fyp/system-diagram.svg" alt="System diagram of the solar-powered sensor node"></div>
-                <span class="project-name">ML Power Manager for a Solar IoT Node</span>
-                <span class="project-tech">ESP32 · TensorFlow Lite · Q-learning</span>
-                <span class="project-cta"><i class="fa-solid fa-circle-info"></i> Final-year project · View details</span>
-            </button>
-            <button type="button" class="project" data-category="hardware" data-dialog="relay-dialog">
-                <div class="project-img"><img src="images/siwes/relay-board-thumb.jpg" alt="ESP32 six-relay smart home board" style="object-position: center 70%"></div>
-                <span class="project-name">Smart Home Relay Board</span>
-                <span class="project-tech">ESP32 · C++ · Soldering</span>
-                <span class="project-cta"><i class="fa-solid fa-images"></i> SIWES project · View details</span>
-            </button>
-            <a class="project" data-category="web" href="https://burjnx.github.io/tasker-auth-demov1/" target="_blank" rel="noopener">
-                <div class="project-img"><img src="images/tasker.png" alt="Tasker task management app dashboard"></div>
-                <span class="project-name">Tasker App</span>
-                <span class="project-tech">React · Tailwind · Kanban board · Nithub team</span>
-                <span class="project-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i> Try the live demo</span>
-            </a>
-            <a class="project" data-category="web" href="https://github.com/burjnx/personal-portfolio" target="_blank" rel="noopener">
-                <div class="project-img"><img src="images/portfolio.png" alt="Portfolio website screenshot"></div>
-                <span class="project-name">This Portfolio</span>
-                <span class="project-tech">HTML · CSS · JavaScript</span>
-                <span class="project-cta"><i class="fa-brands fa-github"></i> View on GitHub</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="contacts" id="contacts">
-        <div class="contact-container">
-            <div class="contact-heading">
-                <h2>Let's work together<span>.</span></h2>
-                <p class="text">Or reach me via <a href="mailto:adulojutadelolaburj@gmail.com">adulojutadelolaburj@gmail.com</a></p>
+        <!-- Highlights -->
+        <section class="highlights" aria-label="Highlights">
+            <div class="wrap highlight-grid">
+                <div class="highlight reveal">
+                    <span class="hl-num">53 KB</span>
+                    <p>Machine learning model running on an ESP32 in my final-year project</p>
+                </div>
+                <div class="highlight reveal">
+                    <span class="hl-num">6 relays</span>
+                    <p>ESP32 smart home board assembled, soldered and programmed during SIWES</p>
+                </div>
+                <div class="highlight reveal">
+                    <span class="hl-num">4 pages</span>
+                    <p>Built in React as part of the Nithub frontend team</p>
+                </div>
             </div>
-            <form class="contact-form" id="contact-form">
-                <div class="input-wrap">
-                    <input type="text" id="f-first" name="firstName" class="contact-input" autocomplete="given-name" required>
-                    <label for="f-first">First Name</label>
-                    <i class="icon fa-solid fa-address-card"></i>
+        </section>
+
+        <!-- Work -->
+        <section class="section" id="work">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Selected work</p>
+                    <h2>Projects</h2>
                 </div>
-                <div class="input-wrap">
-                    <input type="text" id="f-last" name="lastName" class="contact-input" autocomplete="family-name" required>
-                    <label for="f-last">Last Name</label>
-                    <i class="icon fa-solid fa-address-card"></i>
+
+                <article class="project reveal">
+                    <div class="project-body">
+                        <div class="project-top">
+                            <span class="project-num">01</span>
+                            <span class="badge">Final-year project · 2026</span>
+                        </div>
+                        <h3>ML-Based Power Management for a Solar-Powered IoT Node</h3>
+                        <p class="stack">Python · TensorFlow · TensorFlow Lite Micro · ESP32 (C++) · Q-learning</p>
+                        <p>Small solar-powered sensors either die on cloudy days or waste energy measuring too often. I built a sensor node that predicts its own battery charge and decides how often to take readings, so it keeps running without wasting power.</p>
+                        <ul class="points">
+                            <li>Built a battery simulator on a year of hourly NASA POWER solar data for Lagos.</li>
+                            <li>Trained an LSTM to forecast battery charge and a Q-learning agent to choose the duty cycle.</li>
+                            <li>Converted the model to int8 and ran it on a real ESP32 with DHT22 and BH1750 sensors.</li>
+                        </ul>
+                        <dl class="stats">
+                            <div><dt>90%</dt><dd>lower forecast error than a simple baseline</dd></div>
+                            <div><dt>0</dt><dd>battery depletions in a year-long simulation</dd></div>
+                            <div><dt>53 KB</dt><dd>model size on the ESP32</dd></div>
+                        </dl>
+                        <details class="more">
+                            <summary>What went wrong and how I fixed it</summary>
+                            <p>The first LSTM used an operation the microcontroller library doesn't support, and inference kept crashing until I traced it to the ESP32's default task stack being too small. I retrained a smaller 6-hour model so it would fit. The int8 model is less accurate near full charge, a known effect of quantisation that I measured and documented.</p>
+                        </details>
+                    </div>
+                    <figure class="project-media media-diagram">
+                        <img src="images/fyp/system-diagram.svg" alt="System diagram: solar panel, MPPT charger and battery power an ESP32 that runs an LSTM forecaster and a Q-learning controller, reads DHT22 and BH1750 sensors and sends data over LoRa" loading="lazy">
+                        <figcaption>System architecture</figcaption>
+                    </figure>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project-body">
+                        <div class="project-top">
+                            <span class="project-num">02</span>
+                            <span class="badge">SIWES · Nithub · 2025</span>
+                        </div>
+                        <h3>Smart Home Relay Board</h3>
+                        <p class="stack">ESP32 · C++ (Arduino) · Soldering · Relay circuits</p>
+                        <p>A six-relay smart home board built around an ESP32, from Nithub's HomeKit design.</p>
+                        <ul class="points">
+                            <li>Assembled and soldered the PCB: relays, transistors, diodes, resistors and the ESP32.</li>
+                            <li>Wrote the C++ code that switches each relay.</li>
+                            <li>Tested every relay channel before powering loads.</li>
+                        </ul>
+                    </div>
+                    <figure class="project-media">
+                        <img src="images/relay-board-card.jpg" alt="Assembled six-relay board with an ESP32 module" loading="lazy" width="900" height="857">
+                        <figcaption>The finished board</figcaption>
+                    </figure>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project-body">
+                        <div class="project-top">
+                            <span class="project-num">03</span>
+                            <span class="badge">Team project · Nithub · 2025</span>
+                        </div>
+                        <h3>Tasker: Team Task Management App</h3>
+                        <p class="stack">React · Tailwind CSS · React Router · Git</p>
+                        <p>A web app for managing team projects and tasks, built by the Nithub frontend team.</p>
+                        <ul class="points">
+                            <li>Built the dashboard, projects, project detail and teams pages.</li>
+                            <li>Worked in a team with Git branches and pull requests.</li>
+                        </ul>
+                        <div class="links">
+                            <a href="https://burjnx.github.io/tasker-auth-demov1/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live demo</a>
+                            <a href="https://github.com/burjnx/tasker-auth-demov1" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <figure class="project-media media-screen">
+                        <img src="images/tasker.png" alt="Tasker dashboard with summary cards and a task list" loading="lazy" width="1440" height="900">
+                        <figcaption>Dashboard</figcaption>
+                    </figure>
+                </article>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section section-alt" id="experience">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Where I've worked</p>
+                    <h2>Experience</h2>
                 </div>
-                <div class="input-wrap w-100">
-                    <input type="email" id="f-email" name="email" class="contact-input" autocomplete="email" required>
-                    <label for="f-email">Email</label>
-                    <i class="icon fa-solid fa-envelope"></i>
+                <ol class="timeline">
+                    <li class="reveal">
+                        <div class="tl-when">Apr – Sep 2025</div>
+                        <div class="tl-body">
+                            <h3>Hardware and Embedded Systems Intern (SIWES)</h3>
+                            <p class="org">Nithub (NITDA IT Hub), University of Lagos</p>
+                            <ul class="points">
+                                <li>Trained in programming Arduino Uno and ESP32 microcontrollers in C++.</li>
+                                <li>Assembled and soldered a 6-relay ESP32 smart home board and wrote the code that switches each relay.</li>
+                                <li>Built and tested circuits with sensors and displays, including a motion sensor with an LCD readout.</li>
+                                <li>Learned KiCad for schematics and PCB layout, and how to read component datasheets.</li>
+                                <li>On the frontend team for Tasker, built the dashboard, projects and teams pages in React.</li>
+                            </ul>
+                            <div class="thumbs">
+                                <a href="images/siwes/pir-lcd.jpg" target="_blank" rel="noopener"><img src="images/siwes/pir-lcd-thumb.jpg" alt="Motion sensor circuit with LCD readout" loading="lazy"><span>Motion sensor with LCD</span></a>
+                                <a href="images/siwes/solar-monitor-schematic.jpg" target="_blank" rel="noopener"><img src="images/siwes/solar-monitor-schematic-thumb.jpg" alt="Solar monitor schematic in KiCad" loading="lazy"><span>KiCad schematic (training)</span></a>
+                                <a href="images/siwes/solar-monitor-pcb.jpg" target="_blank" rel="noopener"><img src="images/siwes/solar-monitor-pcb-thumb.jpg" alt="Solar monitor PCB layout in KiCad" loading="lazy"><span>KiCad PCB layout (training)</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reveal">
+                        <div class="tl-when">Nov 2025</div>
+                        <div class="tl-body">
+                            <h3>Media and Audio-Visual Volunteer</h3>
+                            <p class="org">Nithub, University of Lagos</p>
+                            <ul class="points">
+                                <li>Ran presentation laptops and projection for the three-day MIRG-ICAIR 2025 International Conference on AI and Robotics.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Skills + education -->
+        <section class="section" id="skills">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">What I work with</p>
+                    <h2>Skills</h2>
                 </div>
-                <div class="input-wrap textarea w-100">
-                    <textarea id="f-msg" name="message" class="contact-input" required></textarea>
-                    <label for="f-msg">Message</label>
-                    <i class="icon fa-solid fa-message"></i>
+                <div class="skill-grid">
+                    <div class="skill-card reveal">
+                        <h3><i class="fa-solid fa-microchip"></i> Engineering and Hardware</h3>
+                        <ul class="tags"><li>ESP32</li><li>Arduino</li><li>Circuit assembly</li><li>Soldering</li><li>Multimeter</li><li>Lab test equipment</li><li>Solar charging circuits</li><li>KiCad (basics)</li><li>Proteus</li></ul>
+                    </div>
+                    <div class="skill-card reveal">
+                        <h3><i class="fa-solid fa-code"></i> Programming and Web</h3>
+                        <ul class="tags"><li>Python</li><li>C/C++ (Arduino)</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>React</li><li>Git and GitHub</li></ul>
+                    </div>
+                    <div class="skill-card reveal">
+                        <h3><i class="fa-solid fa-brain"></i> Data and Machine Learning</h3>
+                        <ul class="tags"><li>TensorFlow / Keras</li><li>TensorFlow Lite Micro</li><li>NumPy</li><li>pandas</li><li>Google Colab</li></ul>
+                    </div>
+                    <div class="skill-card reveal">
+                        <h3><i class="fa-solid fa-toolbox"></i> Office and Tools</h3>
+                        <ul class="tags"><li>Word</li><li>Excel</li><li>PowerPoint</li><li>MATLAB (coursework)</li><li>Arduino IDE</li></ul>
+                    </div>
                 </div>
-                <div class="contact-buttons w-100">
-                    <input type="submit" value="Send message" class="btn submit">
+
+                <div class="education reveal">
+                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <p class="eyebrow">Education · 2020 – 2026</p>
+                        <h3>B.Sc. Electrical and Electronics Engineering</h3>
+                        <p class="org">University of Lagos</p>
+                        <p>Final examinations completed; results pending. Relevant courses: Digital Signal Processing, Control Systems, Microprocessors, Computer Programming, Power Systems.</p>
+                    </div>
                 </div>
-                <p class="form-note w-100">Opens your email app with the message ready to send.</p>
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section section-alt" id="contact">
+            <div class="wrap contact">
+                <div>
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let's talk</h2>
+                    <p class="contact-lead">I'm open to engineering and technology roles in Lagos and across Nigeria. The quickest way to reach me is email or phone.</p>
+                    <div class="hero-actions">
+                        <a href="mailto:adulojutadelolaburj@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email me</a>
+                        <a href="Tadelola-Aduloju-Burgess-CV.pdf" class="btn" download><i class="fa-solid fa-download"></i> Download CV</a>
+                    </div>
+                </div>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div><span class="label">Email</span><a href="mailto:adulojutadelolaburj@gmail.com" id="email">adulojutadelolaburj@gmail.com</a></div>
+                        <button type="button" class="copy" data-copy="adulojutadelolaburj@gmail.com" aria-label="Copy email"><i class="fa-regular fa-copy"></i><span class="copied">Copied</span></button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div><span class="label">Phone</span><a href="tel:+2348168963852" id="phone">+234 816 896 3852</a></div>
+                        <button type="button" class="copy" data-copy="+2348168963852" aria-label="Copy phone number"><i class="fa-regular fa-copy"></i><span class="copied">Copied</span></button>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github"></i>
+                        <div><span class="label">GitHub</span><a href="https://github.com/burjnx" target="_blank" rel="noopener">github.com/burjnx</a></div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div><span class="label">Location</span>Lagos, Nigeria</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <!-- Nithub SIWES details pop-up -->
-    <dialog class="details-dialog" id="nithub-dialog" aria-labelledby="nithub-title">
-        <div class="dialog-inner">
-            <button type="button" class="dialog-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-            <p class="dialog-eyebrow">Apr – Sep 2025 · SIWES industrial training</p>
-            <h2 id="nithub-title">Hardware and Embedded Systems Intern</h2>
-            <p class="dialog-org">Nithub (NITDA IT Hub), University of Lagos</p>
-
-            <p class="dialog-lead">Six months at UNILAG's technology hub, moving from circuit theory to real hardware: programming microcontrollers, soldering and testing boards, and learning PCB design.</p>
-
-            <div class="dialog-cols">
-                <div>
-                    <h3>What I worked on</h3>
-                    <ul>
-                        <li><strong>Smart home relay board:</strong> assembled and soldered a 6-relay ESP32 board and wrote the C++ code that switches each relay.</li>
-                        <li><strong>PCB design:</strong> learned KiCad for circuit schematics and PCB layout, using a smart solar monitor design, and how to read component datasheets.</li>
-                        <li><strong>Sensor circuits:</strong> built Arduino and ESP32 circuits, including a motion sensor with an LCD readout.</li>
-                        <li><strong>Web:</strong> built frontend screens for the hub's React task-management app.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Skills gained</h3>
-                    <ul class="skill-tags">
-                        <li>C++ (Arduino, ESP32)</li>
-                        <li>KiCad basics</li>
-                        <li>Soldering and board assembly</li>
-                        <li>Reading datasheets</li>
-                        <li>Sensor integration</li>
-                                                <li>Hardware debugging</li>
-                        <li>React</li>
-                    </ul>
-                    <h3>Lessons learned</h3>
-                    <p>KiCad's design rules took practice to get right. I burnt a PCB and damaged a jumper pad during assembly, which taught me to test carefully before powering a board. Some parts weren't available in Nigeria, so I learned to find working substitutes.</p>
-                </div>
-            </div>
-
-            <h3>Photos</h3>
-            <div class="gallery">
-                <figure><a href="images/siwes/relay-board.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-thumb.jpg" alt="ESP32 six-relay smart home board" loading="lazy"></a><figcaption>ESP32 six-relay smart home board</figcaption></figure>
-                <figure><a href="images/siwes/relay-web-control.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-web-control-thumb.jpg" alt="Web page for switching each relay" loading="lazy"></a><figcaption>Web control page for the relays</figcaption></figure>
-                <figure><a href="images/siwes/relay-board-front.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-front-thumb.jpg" alt="Assembled relay board, front" loading="lazy"></a><figcaption>Assembled and soldered board</figcaption></figure>
-                <figure><a href="images/siwes/relay-board-back.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-back-thumb.jpg" alt="Nithub HomeKit PCB, back" loading="lazy"></a><figcaption>Nithub HomeKit PCB (back)</figcaption></figure>
-                <figure><a href="images/siwes/solar-monitor-schematic.jpg" target="_blank" rel="noopener"><img src="images/siwes/solar-monitor-schematic-thumb.jpg" alt="Smart solar monitor schematic in KiCad" loading="lazy"></a><figcaption>Smart solar monitor schematic (KiCad training)</figcaption></figure>
-                <figure><a href="images/siwes/solar-monitor-pcb.jpg" target="_blank" rel="noopener"><img src="images/siwes/solar-monitor-pcb-thumb.jpg" alt="Smart solar monitor PCB layout" loading="lazy"></a><figcaption>Smart solar monitor PCB layout (KiCad training)</figcaption></figure>
-                <figure><a href="images/siwes/pir-lcd.jpg" target="_blank" rel="noopener"><img src="images/siwes/pir-lcd-thumb.jpg" alt="Motion sensor circuit with LCD readout" loading="lazy"></a><figcaption>Motion sensor with LCD readout</figcaption></figure>
-            </div>
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <span>© 2026 Tadelola Aduloju Burgess</span>
+            <span>Built from scratch with HTML, CSS and JavaScript · <a href="https://github.com/burjnx/personal-portfolio" target="_blank" rel="noopener">Source</a></span>
         </div>
-    </dialog>
-
-    <!-- Final-year project pop-up -->
-    <dialog class="details-dialog" id="fyp-dialog" aria-labelledby="fyp-title">
-        <div class="dialog-inner">
-            <button type="button" class="dialog-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-            <p class="dialog-eyebrow">Final-year project · University of Lagos · 2026</p>
-            <h2 id="fyp-title">ML-Based Power Management for a Solar-Powered IoT Sensor Node</h2>
-            <p class="dialog-org">Embedded machine learning on an ESP32</p>
-
-            <p class="dialog-lead">Small solar-powered sensors either die on cloudy days or waste energy measuring too often when power is plentiful. I built a sensor node that predicts its own battery charge and decides how often to work, so it keeps running without wasting energy.</p>
-
-            <figure class="dialog-figure">
-                <img src="images/fyp/system-diagram.svg" alt="System diagram: solar panel, MPPT charger and battery power an ESP32 that runs an LSTM forecaster and a Q-learning controller, reads DHT22 and BH1750 sensors and sends data over LoRa">
-            </figure>
-
-            <h3>Results</h3>
-            <div class="stat-grid">
-                <div class="stat"><span class="stat-num">90%</span><span class="stat-label">lower forecast error than a simple baseline</span></div>
-                <div class="stat"><span class="stat-num">0</span><span class="stat-label">battery depletions in a year-long simulation</span></div>
-                <div class="stat"><span class="stat-num">53 KB</span><span class="stat-label">model running on the ESP32 itself</span></div>
-                <div class="stat"><span class="stat-num">Best</span><span class="stat-label">quality of service of the 4 strategies tested</span></div>
-            </div>
-
-            <div class="dialog-cols">
-                <div>
-                    <h3>How it works</h3>
-                    <ul>
-                        <li><strong>Data:</strong> built a battery simulator on one year of hourly NASA POWER solar data for Lagos.</li>
-                        <li><strong>Forecast:</strong> trained an LSTM network to predict the battery's state of charge.</li>
-                        <li><strong>Decide:</strong> trained a Q-learning agent to choose the sensor's duty cycle, aiming for energy-neutral operation.</li>
-                        <li><strong>Deploy:</strong> converted the model to an int8 TensorFlow Lite Micro model and ran it on a real ESP32 with live DHT22 and BH1750 sensors.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Skills used</h3>
-                    <ul class="skill-tags">
-                        <li>Python</li>
-                        <li>TensorFlow / Keras</li>
-                        <li>TensorFlow Lite Micro</li>
-                        <li>Reinforcement learning</li>
-                        <li>ESP32 (C++)</li>
-                        <li>I2C sensors</li>
-                        <li>Solar charging</li>
-                    </ul>
-                    <h3>Challenges</h3>
-                    <p>The first LSTM used an operation the microcontroller library doesn't support, and inference kept crashing until I traced it to the ESP32's default task stack being too small. I retrained a smaller 6-hour model so it would fit. The int8 model is less accurate near full charge, a known effect of quantisation that I measured and documented.</p>
-                </div>
-            </div>
-        </div>
-    </dialog>
-
-    <!-- Relay board pop-up -->
-    <dialog class="details-dialog" id="relay-dialog" aria-labelledby="relay-title">
-        <div class="dialog-inner">
-            <button type="button" class="dialog-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-            <p class="dialog-eyebrow">SIWES project · Nithub, UNILAG · 2025</p>
-            <h2 id="relay-title">Smart Home Relay Board</h2>
-            <p class="dialog-org">ESP32 · C++ · Soldering</p>
-
-            <p class="dialog-lead">A six-relay smart home board built around an ESP32. I assembled and soldered the board and wrote the code that switches each relay.</p>
-
-            <div class="dialog-cols">
-                <div>
-                    <h3>What I did</h3>
-                    <ul>
-                        <li>Soldered and assembled the PCB: relays, resistors, capacitors and the ESP32.</li>
-                        <li>Wrote the C++ code that switches each relay.</li>
-                        <li>Tested each relay channel.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Skills used</h3>
-                    <ul class="skill-tags">
-                        <li>ESP32</li>
-                        <li>C++ (Arduino)</li>
-                        <li>Soldering</li>
-                        <li>Relay circuits</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>Photos</h3>
-            <div class="gallery">
-                <figure><a href="images/siwes/relay-board.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-thumb.jpg" alt="ESP32 six-relay smart home board" loading="lazy"></a><figcaption>The finished board</figcaption></figure>
-                <figure><a href="images/siwes/relay-web-control.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-web-control-thumb.jpg" alt="Web page for switching each relay" loading="lazy"></a><figcaption>Web control page for the relays</figcaption></figure>
-                <figure><a href="images/siwes/relay-board-front.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-front-thumb.jpg" alt="Assembled relay board, front" loading="lazy"></a><figcaption>Assembled and soldered</figcaption></figure>
-                <figure><a href="images/siwes/relay-board-back.jpg" target="_blank" rel="noopener"><img src="images/siwes/relay-board-back-thumb.jpg" alt="Nithub HomeKit PCB, back" loading="lazy"></a><figcaption>Nithub HomeKit PCB (back)</figcaption></figure>
-            </div>
-        </div>
-    </dialog>
+    </footer>
 
     <script src="script.js"></script>
 </body>

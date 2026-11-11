@@ -1,37 +1,37 @@
 # Personal Portfolio
 
-My personal portfolio site as an Electrical and Electronics Engineering graduate: who I am, my skills, projects and how to reach me.
+My personal portfolio site as an Electrical and Electronics Engineering graduate from the University of Lagos: my projects, experience, skills and how to reach me.
+
+**Live:** https://burjnx.github.io/personal-portfolio/
 
 ![Portfolio on desktop](images/screenshot.png)
 
 <img src="images/screenshot-mobile.png" alt="Portfolio on mobile" width="260">
 
-## Features
+## What's on it
 
-- Fully responsive: desktop sidebar layout, tablet and phone layouts with a menu button
-- Animated education and experience timeline, with a SIWES details pop-up and photo gallery
+- Intro with a Download CV button
+- Numbered project cards: final-year ML power manager (system diagram and results), ESP32 smart home relay board (SIWES), and Tasker (Nithub team project, with live demo)
+- Experience timeline with SIWES photos
 - Skills grouped into engineering and hardware, programming and web, data and ML, and office tools
-- Download CV button
-- Projects with Hardware / Web filters; hardware projects open detail pop-ups (system diagram, results, photos), Tasker opens its live demo
-- Contact form that opens a pre-filled email (no backend needed on GitHub Pages)
-- Click-to-copy email and phone
-- Soft "neumorphic" design built from scratch
+- Contact details with one-click copy
 
 ## Built with
 
-- HTML5, CSS3 and vanilla JavaScript
-- Google Fonts (Poppins), Font Awesome icons and GSAP for small animations
-- No frameworks or templates
+- HTML, CSS and vanilla JavaScript, no frameworks or templates
+- Self-hosted Poppins and JetBrains Mono fonts, Font Awesome icons
+- Soft "neumorphic" styling, fully responsive from phones to wide screens
 
 ## Run it locally
-
-Clone the repo and open `index.html` in a browser:
 
 ```bash
 git clone https://github.com/burjnx/personal-portfolio.git
 cd personal-portfolio
+python3 -m http.server 8080
 ```
+
+Then open http://localhost:8080.
 
 ## Contact
 
-**Tadelola Aduloju** · Lagos, Nigeria · [adulojutadelolaburj@gmail.com](mailto:adulojutadelolaburj@gmail.com)
+**Tadelola Aduloju Burgess** · Lagos, Nigeria · [adulojutadelolaburj@gmail.com](mailto:adulojutadelolaburj@gmail.com)
