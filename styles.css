@@ -350,3 +350,10 @@ h3 { font-size: 20px; font-weight: 600; }
 .nav-links .nav-cv { border-color: transparent; box-shadow: var(--raised-sm); }
 .nav-links .nav-cv:hover { box-shadow: var(--pressed); background: transparent; color: var(--accent); }
 .media-diagram img { background: #f6f8fa; }
+
+/* Phone fixes: keep the education icon square, keep the email on one line */
+@media (max-width: 600px) {
+    .edu-icon { align-self: flex-start; width: 44px; }
+    .contact-list li { padding: 12px 14px; gap: 12px; }
+    .contact-list a { font-size: 14px; }
+}
