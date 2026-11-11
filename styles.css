@@ -127,7 +127,8 @@ h3 { font-size: 20px; font-weight: 600; }
 }
 
 /* ---------- Highlights ---------- */
-.highlights { padding-bottom: 72px; }
+.highlights { padding-bottom: 8px; }
+#work { padding-top: 64px; }
 .highlight-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--line); border-radius: var(--radius);
@@ -297,7 +298,8 @@ h3 { font-size: 20px; font-weight: 600; }
     .hero-bio { font-size: 16px; }
     .hero-actions .btn { flex: 1 1 auto; justify-content: center; }
 
-    .highlights { padding-bottom: 48px; }
+    .highlights { padding-bottom: 0; }
+    #work { padding-top: 48px; }
     .highlight-grid { grid-template-columns: 1fr; }
     .highlight + .highlight { border-left: 0; border-top: 1px solid var(--line); }
     .highlight { padding: 16px 20px; }
