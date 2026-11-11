@@ -7,11 +7,6 @@
     outline: none;
 }
 
-@font-face {
-    font-family: 'Digital7';
-    src: url('fonts/digital-7.ttf') format('truetype');
-}
-
 /* 1rem = 8px on desktop; scaled down on smaller screens (see media queries) */
 html {
     font-size: 50%;
@@ -25,7 +20,7 @@ html {
     --text-color: #2c3e50;
     --background-color: #ffffff;
     --primary-color: #ecf0f3;
-    --light-text-color: #7d8a9c;
+    --light-text-color: #56647a;
     --shadow-light: #ffffff;
     --shadow-dark: #ceced1;
     --raised: -3px -3px 7px var(--shadow-light), 3px 3px 5px var(--shadow-dark);
@@ -464,7 +459,7 @@ section h2 {
     width: 100%;
     height: 100%;
     min-height: 60rem;
-    background: url(images/aboutmain.PNG) center / cover;
+    background: url(images/siwes/relay-board.jpg) center 60% / cover;
     border-radius: 5rem;
     display: flex;
     position: relative;
@@ -600,100 +595,52 @@ section h2 {
     font-weight: 600;
 }
 
-.coding-skills .topic {
-    font-size: 3rem;
-    font-weight: 500;
-    margin: 0 0 2rem 1rem;
+.nowrap { white-space: nowrap; }
+
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
 }
 
-.skill-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 3rem 1rem;
-    margin-bottom: 5rem;
+.skill-group {
+    padding: 3rem 2.8rem 2.6rem;
     border-radius: 3rem;
     background-color: var(--primary-color);
     box-shadow: -4px -4px 7px var(--shadow-light), 5px 5px 5px var(--shadow-dark);
 }
 
-.fskillrate {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 0;
-}
-
-.fskillrate .code-img {
-    height: 8rem;
-    width: 100%;
+.skill-group h3 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1.2rem;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 2.2rem;
 }
 
-.fskillrate .code-img img {
-    height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-.nowrap { white-space: nowrap; }
-
-.fskillrate .dail-wrapper {
-    position: relative;
-    width: 18rem;
-    height: 18rem;
-    display: flex;
+.skill-group h3 i {
+    width: 4.4rem;
+    height: 4.4rem;
+    flex: 0 0 4.4rem;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-}
-
-.knob-ind {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    font-size: 1.9rem;
+    box-shadow: var(--pressed);
+}
+
+.skill-group .skill-tags {
+    margin-bottom: 0;
+}
+
+.skill-group .skill-tags li {
+    padding: .8rem 1.7rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 5rem;
     box-shadow: var(--raised);
-}
-
-.knob-ind .needle {
-    position: absolute;
-    top: .5rem;
-    left: 3.75rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    transform-origin: 1.25rem 4.5rem;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    box-shadow: inset 0 -2px 5px #ffffff, inset 0 5px 7px var(--shadow-dark);
-}
-
-.ticks {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-}
-
-.segment {
-    position: absolute;
-    top: calc(50% - 2.5rem);
-    left: calc(50% - .1rem);
-    width: .2rem;
-    height: 2.5rem;
-    border-radius: 3px;
-    opacity: .12;
-    transform-origin: center bottom;
-    transition: opacity .3s;
-}
-
-.segment.active {
-    opacity: 1;
-}
-
-.fskillrate .percentage-text {
-    font-size: 4rem;
-    font-family: 'Digital7', monospace;
 }
 
 /* ---------- Details button + pop-up ---------- */
@@ -1094,7 +1041,7 @@ body.dialog-open {
 }
 
 .contact-heading h2 span {
-    color: #8e9bb0;
+    color: var(--light-text-color);
 }
 
 .contact-heading .text {
@@ -1335,12 +1282,51 @@ textarea.contact-input ~ .icon {
         height: auto;
         margin: 2.5rem;
         border-radius: 4rem;
-        padding: 5rem 3rem;
+        padding: 4rem 3rem;
         overflow: visible;
     }
 
+    /* Compact profile card: photo beside name, so the intro shows sooner */
+    .profile {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 3.5rem;
+        align-items: center;
+        max-width: 60rem;
+    }
+
     .profile .image {
-        width: 26rem;
+        width: 20rem;
+        grid-row: 1 / span 3;
+    }
+
+    .profile .innerimg {
+        width: calc(100% - 2.4rem);
+        height: calc(100% - 2.4rem);
+    }
+
+    .profile .name {
+        margin: 0;
+        align-self: end;
+    }
+
+    .profile .title {
+        font-size: 2.3rem;
+        align-self: start;
+    }
+
+    .profile .socials {
+        margin: 1.5rem 0 0;
+        align-self: start;
+    }
+
+    .profile .button,
+    .profile .contact {
+        grid-column: 1 / -1;
+    }
+
+    .profile .button {
+        margin: 3.5rem 0 3rem;
     }
 
     /* Sections stack full width */
@@ -1417,6 +1403,8 @@ textarea.contact-input ~ .icon {
 
     .contacts {
         padding: 8rem 0 10rem;
+        /* tall enough that the Contact link can scroll it to the top */
+        min-height: calc(100vh - 8rem);
     }
 }
 
@@ -1432,7 +1420,15 @@ textarea.contact-input ~ .icon {
 
     .sticky-sidebar {
         margin: 2rem;
-        padding: 5rem 2.5rem;
+        padding: 3.5rem 2.5rem;
+    }
+
+    .profile .image {
+        width: 17rem;
+    }
+
+    .profile .title {
+        font-size: 2.2rem;
     }
 
     section {
@@ -1459,8 +1455,16 @@ textarea.contact-input ~ .icon {
         aspect-ratio: 4 / 3;
     }
 
-    .skill-row {
-        padding: 3rem 0;
+    .skill-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-group .skill-tags li {
+        font-size: 2.3rem;
+    }
+
+    .skill-group h3 {
+        font-size: 2.8rem;
     }
 
     .timeline .what {

@@ -89,43 +89,6 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 1100) closeMenu();
 });
 
-// ---------- Skill dials ----------
-function animateKnob(card, total = 60) {
-  if (card.dataset.done) return;          // run once only
-  card.dataset.done = '1';
-  const target = Number(card.dataset.target) || 0;
-  const needle = card.querySelector('.needle');
-  const percentText = card.querySelector('.percentage-text');
-  const ticks = card.querySelector('.ticks');
-  ticks.innerHTML = '';
-
-  const segments = [];
-  for (let i = 0; i < total; i++) {
-    const tick = document.createElement('div');
-    tick.className = 'segment';
-    tick.style.transform = `rotate(${(360 / total) * i}deg) translateY(-6rem)`;
-    tick.style.background = `hsl(${(120 * i) / (total - 1)}, 100%, 45%)`;
-    ticks.appendChild(tick);
-    segments.push(tick);
-  }
-
-  let n = 0;
-  const timer = setInterval(() => {
-    if (n >= target) { clearInterval(timer); return; }
-    segments[n].classList.add('active');
-    needle.style.transform = `rotate(${(360 / total) * n}deg)`;
-    n++;
-    percentText.textContent = `${Math.round((n / total) * 100)}%`;
-  }, 30);
-}
-
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) animateKnob(entry.target);
-  });
-}, { threshold: 0.4 });
-document.querySelectorAll('.fskillrate').forEach(card => skillObserver.observe(card));
-
 // ---------- Education / Experience timeline animation ----------
 // Each circle rises from the bottom of its line to its place, then that
 // entry's date, title and description ease in one line at a time.

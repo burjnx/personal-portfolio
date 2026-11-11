@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-My personal portfolio site: who I am, my skills, projects and how to reach me.
+My personal portfolio site as an Electrical and Electronics Engineering graduate: who I am, my skills, projects and how to reach me.
 
 ![Portfolio on desktop](images/screenshot.png)
 
@@ -10,7 +10,8 @@ My personal portfolio site: who I am, my skills, projects and how to reach me.
 
 - Fully responsive: desktop sidebar layout, tablet and phone layouts with a menu button
 - Animated education and experience timeline, with a SIWES details pop-up and photo gallery
-- Animated skill dials for front-end and programming languages
+- Skills grouped into engineering and hardware, programming and web, data and ML, and office tools
+- Download CV button
 - Projects with Hardware / Web filters; hardware projects open detail pop-ups (system diagram, results, photos), Tasker opens its live demo
 - Contact form that opens a pre-filled email (no backend needed on GitHub Pages)
 - Click-to-copy email and phone
