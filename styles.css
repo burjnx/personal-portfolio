@@ -357,3 +357,6 @@ h3 { font-size: 20px; font-weight: 600; }
     .contact-list li { padding: 12px 14px; gap: 12px; }
     .contact-list a { font-size: 14px; }
 }
+
+/* Odd number of skill cards: last one spans the full row */
+.skill-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
