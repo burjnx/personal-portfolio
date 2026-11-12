@@ -81,11 +81,11 @@
                         </div>
                         <h3>ML-Based Power Management for a Solar-Powered IoT Node</h3>
                         <p class="stack">Python · TensorFlow · TensorFlow Lite Micro · ESP32 (C++) · Q-learning</p>
-                        <p>Small solar-powered sensors either die on cloudy days or waste energy measuring too often. This sensor node predicts its own battery charge and decides how often to take readings, so it keeps running without wasting power.</p>
+                        <p>Small solar-powered sensors either die on cloudy days or waste energy measuring too often. I built a sensor node that predicts its own battery charge and decides how often to take readings, so it keeps running without wasting power.</p>
                         <ul class="points">
-                            <li>Uses a battery simulation built on a year of hourly NASA POWER solar data for Lagos.</li>
-                            <li>One model forecasts the battery charge; a second decides how often the sensor works.</li>
-                            <li>Runs on a real ESP32 with temperature, humidity (DHT22) and light (BH1750) sensors.</li>
+                            <li>Built a battery simulator on a year of hourly NASA POWER solar data for Lagos.</li>
+                            <li>Trained an LSTM to forecast battery charge and a Q-learning agent to choose the duty cycle.</li>
+                            <li>Converted the model to int8 and ran it on a real ESP32 with DHT22 and BH1750 sensors.</li>
                         </ul>
                         <dl class="stats">
                             <div><dt>90%</dt><dd>lower forecast error than a simple baseline</dd></div>
@@ -93,8 +93,8 @@
                             <div><dt>53 KB</dt><dd>model size on the ESP32</dd></div>
                         </dl>
                         <details class="more">
-                            <summary>Challenges</summary>
-                            <p>The first model was too large for the ESP32 and kept crashing it, so a smaller model was used that fits in the board's memory. Shrinking the model makes it slightly less accurate when the battery is nearly full, which was measured and documented.</p>
+                            <summary>What went wrong and how I fixed it</summary>
+                            <p>The first LSTM used an operation the microcontroller library doesn't support, and inference kept crashing until I traced it to the ESP32's default task stack being too small. I retrained a smaller 6-hour model so it would fit. The int8 model is less accurate near full charge, a known effect of quantisation that I measured and documented.</p>
                         </details>
                     </div>
                     <figure class="project-media media-diagram">
